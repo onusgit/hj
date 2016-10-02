@@ -29,7 +29,13 @@
 
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 
-	<?php wp_head(); ?>
+	<?php wp_head();         
+        wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css',false,'1.1','all');
+        wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.css',false,'1.1','all');
+        wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.js',false,'1.1','all');
+        wp_enqueue_style( 'custome', get_template_directory_uri() . '/styles/custome.css',false,'1.1','all');
+        ?>
+        
 
 </head>
 
