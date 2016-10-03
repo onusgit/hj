@@ -43,7 +43,7 @@
 
 	<?php appthemes_before(); ?>
 
-	<div class="container">
+	<div class="container padding-0">
 
 		<?php if ( $cp_options->debug_mode ) { ?><div class="debug"><h3><?php _e( 'Debug Mode On', APP_TD ); ?></h3><?php print_r( $wp_query->query_vars ); ?></div><?php } ?>
 

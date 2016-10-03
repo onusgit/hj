@@ -114,7 +114,7 @@ p.red { color: #CC0000; }
 .box-yellow, .info { background-color:#FFFFCC; border:1px solid #D8D2A9; padding:7px; -khtml-border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
 .box-red, .error, .checkout-error { background-color:#FFEBE8; border:1px solid #CC0000; padding:7px; -khtml-border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
 div.error, div.checkout-error { padding:12px; margin:0 0 10px; -khtml-border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; }
-.container { margin:0; padding:0; width:100%; min-width:940px; font:normal 12px/1.5em Arial, Helvetica, sans-serif; color:#4f4f4f; }
+.container { margin:0; padding:0; width:100%; min-width:940px;color:#4f4f4f; }
 
 /* header */
 .header_top_res { margin:0 auto; width:940px; }
@@ -203,7 +203,7 @@ option.level-7{}
 #breadcrumb{font-size:11px; margin-top:-10px; padding:0 10px 5px 5px; text-shadow: 0 1px 0 #FFFFFF;}
 
 /* content */
-.content{ margin:0; padding:0; background:url(images/content_topbg.gif) repeat-x top; border-top:2px solid #efefef;}
+.content{ margin:0; padding:0; /*background:url(images/content_topbg.gif) repeat-x top;*/ border-top:2px solid #efefef;}
 .content_botbg { margin:0; padding:0; background:url(images/content_botbg.gif) repeat-x bottom; background-color:#EFEFEF; border-bottom:2px solid #efefef; min-height: 600px;}
 .shadowblock_out { margin:0 0 20px 0; border:1px solid #bbb; -khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; /* overflow:hidden; */}
 .shadowblock { padding:15px; background:#fff url(images/block_topbg.gif) repeat-x top; border:1px solid #fff; -khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}

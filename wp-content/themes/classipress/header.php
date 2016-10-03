@@ -39,7 +39,7 @@ global $cp_options;
 
     </div><!-- /header_main -->
     <div class="header_menu">
-        <div class="">
+        <div class="content-center">
             <?php //wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'menu-header', 'fallback_cb' => false, 'container' => false)); ?>
             <!--<a href="<?php echo CP_ADD_NEW_URL; ?>" class="obtn btn_orange"><?php _e('Post an Ad', APP_TD); ?></a>-->
             <!--<div class="clr"></div>-->

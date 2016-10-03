@@ -10,6 +10,15 @@ and open the template in the editor.
 .container {
     width: 100% !important;
 }
+body {
+    font-family: Tahoma,verdana,geneva,lucida,'lucida grande',arial,helvetica,sans-serif !important;
+    font-size: 16px;
+    color: #000;
+}
+.content-center{
+    margin: 0px auto;
+    width: 90%;
+}
 
 /*header*/
 
@@ -37,7 +46,10 @@ and open the template in the editor.
     text-decoration: underline;
 }
 #logo{
-    padding-bottom: 5px;
+    padding-bottom: 15px;
+}
+.header_menu {
+    border-radius: 5px;
 }
 @media (min-width: 768px){
     .navbar-nav > li {
@@ -50,12 +62,66 @@ and open the template in the editor.
     background: none;
     border-bottom: none;
 }
-
-
+.padding-0{
+    padding: 0;
+}
+.margin-0{
+    margin: 0;
+}
+.font-16{
+    font-size: 16px;
+}
+.padding-bottom-10per{
+    padding-bottom: 10%;
+}
+.padding-bottom-5per{
+    padding-bottom: 5%;
+}
+.padding-bottom-5{
+    padding-bottom: 5px;
+}
+a :hover{
+    text-decoration: none;
+}
+.width-100per{
+    width: 100%;
+}
 
 
 /*footer*/
 .footer{
-    background: url('../images/footer.png') repeat-x;
+    background: url('../images/footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a.city-head {
+    background-color: #0473C0;
+    color: #fff;
+    padding: 3px 7px;
+    font-size: 14px;
+}
+.star {
+    color: #EBC300;
 }
 /* end footer*/
+
+/* main content */
+.main-content-area {
+    font-size: 14px;
+    padding-top: 2%;
+    
+}
+.main-content-area .nav-tabs > li {
+    width: 20%;
+    text-align: center;
+}
+.main-content-area > .nav-area > ul > li > a,.main-content-area > .nav-area > ul > li > a{
+    font-size: 14px;
+}
+.main-content-area> .nav-area > ul > li > a:hover,.main-content-area > .nav-area > ul > li > a:focus{
+    text-decoration: none;
+    background-color: #eeeeee;
+    color: #0000a2;
+    font-size: 14px;
+}
+/* end main content */
