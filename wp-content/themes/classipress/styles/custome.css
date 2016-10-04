@@ -19,7 +19,10 @@ body {
     margin: 0px auto;
     width: 90%;
 }
+hr {
+    border-color: #EBE6CF -moz-use-text-color -moz-use-text-color; 	
 
+}
 /*header*/
 
 .headmenu{
@@ -109,7 +112,7 @@ a.city-head {
 .main-content-area {
     font-size: 14px;
     padding-top: 2%;
-    
+
 }
 .main-content-area .nav-tabs > li {
     width: 20%;
@@ -124,4 +127,92 @@ a.city-head {
     color: #0000a2;
     font-size: 14px;
 }
+.round-border{
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+.bg-grey{
+    background-color: #F8F7F7;
+}
+.bs-example-control-sizing select.form-control {
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    background: #fff;
+}
+.margin-top-10 {
+    margin-top: 10px;
+}
+a.gallerypic img {
+    /* border: 1px solid #ccc; */
+}
+a.gallerypic img:hover {
+    border: 1px solid #AAA9A9;
+}
+.car_cont {
+    width: 75px;
+    height: 75px;
+}
+/*
+#tab1  span.pic-icon {
+ position:relative;
+/*padding-right:50px;
+
+}*/
+a.gallerypic{
+    width:75px;
+    text-decoration:none;
+    position:relative;
+    display:block;
+    padding:2px;
+    margin:2px;
+    float:right;
+}
+
+a.gallerypic span.pic-icon{
+    position:absolute;
+    left:5%;
+    bottom:5%;
+}
+
+a.gallerypic:hover span.pic-icon{
+    visibility:visible;
+}
+
+.car_cont { background-image: url('../images/all_car.png'); }
+
+.sprite-GMC { background-position: 0 0; } 
+.sprite-audi { background-position: 0 -125px; } 
+.sprite-benz { background-position: 0 -250px; } 
+.sprite-bmw { background-position: 0 -375px; } 
+.sprite-cadillac { background-position: 0 -500px; } 
+.sprite-chevrolet { background-position: 0 -625px; } 
+.sprite-dodge { background-position: 0 -750px; } 
+.sprite-ford { background-position: 0 -875px; } 
+.sprite-honda { background-position: 0 -1000px; } 
+.sprite-hyundai { background-position: 0 -1125px; } 
+.sprite-jeep { background-position: 0 -1250px; } 
+.sprite-kia { background-position: 0 -1375px; } 
+.sprite-landrover { background-position: 0 -1500px; } 
+.sprite-lexus { background-position: 0 -1625px; } 
+.sprite-mazda { background-position: 0 -1750px; } 
+.sprite-mini { background-position: 0 -1875px; } 
+.sprite-mitsubishi { background-position: -125px 0; } 
+.sprite-nissan { background-position: -125px -125px; } 
+.sprite-opel { background-position: -125px -250px; } 
+.sprite-renault { background-position: -125px -375px; } 
+.sprite-toyota { background-position: -125px -500px; } 
+.sprite-volkswagen { background-position: -125px -625px; } 
+.sprite-daihatsu { background-position: -125px -750px; } 
+.sprite-infiniti { background-position: -125px -875px; } 
+.sprite-suzuki { background-position: -125px -1000px; } 
+.sprite-parts { background-position: -125px -1125px; } 
+.sprite-porsche { background-position: -125px -1250px; } 
+.sprite-chrysler { background-position: -125px -1375px; } 
+.sprite-trucks { background-position: -125px -1500px; } 
+.sprite-bikes { background-position: -125px -1625px; } 
+.sprite-classic { background-position: -125px -1750px; } 
+.sprite-damaged { background-position: -125px -1875px; } 
+.sprite-tanazul { background-position: 0px -2000px; } 
+
 /* end main content */
