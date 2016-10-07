@@ -44,6 +44,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                     </div>
                 </div>
             </div>
+            <?php echo do_shortcode("[pt_view id=b9aca17dnr]"); ?>
             <div class="grid-list">
                 <div class="container padding-0">
                     <div class="list-grid-icon">
@@ -232,7 +233,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             </form>
             <br>
             <hr>
-            <form action="https://haraj.com.sa/search.php" method="get" class="visible-xs">
+            <form action="/search.php" method="get" class="visible-xs">
                 <div class="row">
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                         <input type="search" class="form-control margin-top-10" placeholder="ابحث عن سلعه ..." name="key">
@@ -250,7 +251,6 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                 </div>
             </form>
             <hr>
-            <iframe src="https://www.radioking.com/widgets/player/player.php?id=28600&c=%23071019&ii=&p=1&pp=1&i=0&eq=1&po=1&t=1&a=0&f=medium" name="idFrame" id="idFrame" width="250" height="327" frameBorder="0"></iframe>
             <div class="bs-example bs-example-tabs">
                 <ul class="nav nav-tabs" id="myTab">
                     <li class="active"><a data-toggle="tab" href="#home">سيارات</a></li>
@@ -259,143 +259,143 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                 <div class="tab-content" id="myTabContent">
                     <div id="home" class="tab-pane fade active in">
                         <!-- start img cats-->
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/تويوتا">
+                        <a class="gallerypic" href="/tags/تويوتا">
                             <img class="car_cont sprite-toyota" title="سيارات تويوتا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات تويوتا">
                         </a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/نيسان">
+                        <a class="gallerypic" href="/tags/نيسان">
                             <img class="car_cont sprite-nissan" title="نسيان" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="نسيان"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/فورد">
+                        <a class="gallerypic" href="/tags/فورد">
                             <img class="car_cont sprite-ford" title="سيارات فورد" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات فورد"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/لكزس">
+                        <a class="gallerypic" href="/tags/لكزس">
                             <img class="car_cont sprite-lexus" title="لكزس" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="لكزس"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/شيفروليه">
+                        <a class="gallerypic" href="/tags/شيفروليه">
                             <img class="car_cont sprite-chevrolet" title="سيارات شفروليه للبيع" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات شفروليه للبيع"></a> 
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/مرسيدس">
+                        <a class="gallerypic" href="/tags/مرسيدس">
                             <img class="car_cont sprite-benz" title="سيارات مرسيدس" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات مرسيدس"></a>  
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/جي%20ام%20سي">
+                        <a class="gallerypic" href="/tags/جي%20ام%20سي">
                             <img class="car_cont sprite-GMC" title="جي ام سي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="جي ام سي"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/بي%20ام%20دبليو">
+                        <a class="gallerypic" href="/tags/بي%20ام%20دبليو">
                             <img class="car_cont sprite-bmw" title="بي ام دبليو" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="بي ام دبليو"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/دودج">
+                        <a class="gallerypic" href="/tags/دودج">
                             <img class="car_cont sprite-dodge" title="سيارات دودج" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات دوج"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/همر">
+                        <a class="gallerypic" href="/tags/همر">
                             <img class="car_cont sprite-mini" title="سيارات همر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات همر"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/كاديلاك">
+                        <a class="gallerypic" href="/tags/كاديلاك">
                             <img class="car_cont sprite-cadillac" title="سيارات كاديلاك" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات كاديلاك"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/اودي">
+                        <a class="gallerypic" href="/tags/اودي">
                             <img class="car_cont sprite-audi" title="اودي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="اودي"></a>  
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/هوندا">
+                        <a class="gallerypic" href="/tags/هوندا">
                             <img class="car_cont sprite-honda" title="هوندا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="هوندا"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/لاند روفر">
+                        <a class="gallerypic" href="/tags/لاند روفر">
                             <img class="car_cont sprite-landrover" title="لاندروفر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="لاندروفر"></a> 
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/فولكس واجن">
+                        <a class="gallerypic" href="/tags/فولكس واجن">
                             <img class="car_cont sprite-volkswagen" title="فولكس واجن" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="فولكس واجن"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/مازدا">
+                        <a class="gallerypic" href="/tags/مازدا">
                             <img class="car_cont sprite-mazda" title="مازدا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="مازدا"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/ميتسوبيشي">
+                        <a class="gallerypic" href="/tags/ميتسوبيشي">
                             <img class="car_cont sprite-mitsubishi" title="ميتسوبيشي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="ميتسوبيشي"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/هونداي">
+                        <a class="gallerypic" href="/tags/هونداي">
                             <img class="car_cont sprite-hyundai" title="هونداي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="هونداي"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/جيب">
+                        <a class="gallerypic" href="/tags/جيب">
                             <img class="car_cont sprite-jeep" title="جيب" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="جيب"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/انفنيتي">
+                        <a class="gallerypic" href="/tags/انفنيتي">
                             <img class="car_cont sprite-infiniti" title="انفنيتي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="انفنيتي"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/سوزوكي">
+                        <a class="gallerypic" href="/tags/سوزوكي">
                             <img class="car_cont sprite-suzuki" title="سوزوكي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سوزوكي"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/كيا">
+                        <a class="gallerypic" href="/tags/كيا">
                             <img class="car_cont sprite-kia" title="كيا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="كيا"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/كرايزلر">
+                        <a class="gallerypic" href="/tags/كرايزلر">
                             <img class="car_cont sprite-chrysler" title="كرايزلر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="كرايزلر"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/بورش">
+                        <a class="gallerypic" href="/tags/بورش">
                             <img class="car_cont sprite-porsche" title="بورش" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="بورش"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/قطع غيار وملحقات">
+                        <a class="gallerypic" href="/tags/قطع غيار وملحقات">
                             <img class="car_cont sprite-parts" title="قطع غيار وملحقات" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="قطع غيار وملحقات"></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/شاحنات ومعدات ثقيلة">
+                        <a class="gallerypic" href="/tags/شاحنات ومعدات ثقيلة">
                             <img class="car_cont sprite-trucks" title="شاحنات ومعدات ثقيلة" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="شاحنات ومعدات ثقيلة"></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/دبابات">
+                        <a class="gallerypic" href="/tags/دبابات">
                             <img class="car_cont sprite-bikes" title="دبابات" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="دبابات"></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/سيارات تراثية">
+                        <a class="gallerypic" href="/tags/سيارات تراثية">
                             <img class="car_cont sprite-classic" title="سيارات تراثية" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات تراثية"></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/سيارات مصدومه">
+                        <a class="gallerypic" href="/tags/سيارات مصدومه">
                             <img class="car_cont sprite-damaged" title="سيارات مصدومه" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات مصدومه"></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/tags/سيارات للتنازل">
+                        <a class="gallerypic" href="/tags/سيارات للتنازل">
                             <img class="car_cont sprite-tanazul" title="سيارات للتنازل" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات للتنازل"></a>
                         <!-- end-->
                     </div>
                     <div id="profile" class="tab-pane fade ">
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/تويوتا">
+                        <a class="gallerypic" href="/pic/تويوتا">
                             <img class="car_cont sprite-toyota" title="سيارات تويوتا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات تويوتا">
                             <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/نيسان">
+                        <a class="gallerypic" href="/pic/نيسان">
                             <img class="car_cont sprite-nissan" title="نسيان" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="نسيان">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/فورد">
+                        <a class="gallerypic" href="/pic/فورد">
                             <img class="car_cont sprite-ford" title="سيارات فورد" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات فورد">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/لكزس">
+                        <a class="gallerypic" href="/pic/لكزس">
                             <img class="car_cont sprite-lexus" title="لكزس" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="لكزس">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/شيفروليه">
+                        <a class="gallerypic" href="/pic/شيفروليه">
                             <img class="car_cont sprite-chevrolet" title="سيارات شفروليه للبيع" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات شفروليه للبيع">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>  
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/مرسيدس">
+                        <a class="gallerypic" href="/pic/مرسيدس">
                             <img class="car_cont sprite-benz" title="سيارات مرسيدس" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات مرسيدس">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a> 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/جي%20ام%20سي">
+                        <a class="gallerypic" href="/pic/جي%20ام%20سي">
                             <img class="car_cont sprite-GMC" title="جي ام سي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="جي ام سي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/بي%20ام%20دبليو">
+                        <a class="gallerypic" href="/pic/بي%20ام%20دبليو">
                             <img class="car_cont sprite-bmw" title="بي ام دبليو" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="بي ام دبليو">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/دودج">
+                        <a class="gallerypic" href="/pic/دودج">
                             <img class="car_cont sprite-dodge" title="سيارات دودج" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات دوج">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/همر">
+                        <a class="gallerypic" href="/pic/همر">
                             <img class="car_cont sprite-mini" title="سيارات همر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات همر">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/كاديلاك">
+                        <a class="gallerypic" href="/pic/كاديلاك">
                             <img class="car_cont sprite-cadillac" title="سيارات كاديلاك" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات كاديلاك">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/اودي">
+                        <a class="gallerypic" href="/pic/اودي">
                             <img class="car_cont sprite-audi" title="اودي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="اودي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a> 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/هوندا">
+                        <a class="gallerypic" href="/pic/هوندا">
                             <img class="car_cont sprite-honda" title="هوندا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="هوندا">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/لاند روفر">
+                        <a class="gallerypic" href="/pic/لاند روفر">
                             <img class="car_cont sprite-landrover" title="لاندروفر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="لاندروفر">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>  
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/فولكس واجن">
+                        <a class="gallerypic" href="/pic/فولكس واجن">
                             <img class="car_cont sprite-volkswagen" title="فولكس واجن" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="فولكس واجن">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/مازدا">
+                        <a class="gallerypic" href="/pic/مازدا">
                             <img class="car_cont sprite-mazda" title="مازدا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="مازدا">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/ميتسوبيشي">
+                        <a class="gallerypic" href="/pic/ميتسوبيشي">
                             <img class="car_cont sprite-mitsubishi" title="ميتسوبيشي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="ميتسوبيشي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/هونداي">
+                        <a class="gallerypic" href="/pic/هونداي">
                             <img class="car_cont sprite-hyundai" title="هونداي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="هونداي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/جيب">
+                        <a class="gallerypic" href="/pic/جيب">
                             <img class="car_cont sprite-jeep" title="جيب" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="جيب">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/انفنيتي">
+                        <a class="gallerypic" href="/pic/انفنيتي">
                             <img class="car_cont sprite-infiniti" title="انفنيتي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="انفنيتي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/سوزوكي">
+                        <a class="gallerypic" href="/pic/سوزوكي">
                             <img class="car_cont sprite-suzuki" title="سوزوكي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سوزوكي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/كيا">
+                        <a class="gallerypic" href="/pic/كيا">
                             <img class="car_cont sprite-kia" title="كيا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="كيا">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/كرايزلر">
+                        <a class="gallerypic" href="/pic/كرايزلر">
                             <img class="car_cont sprite-chrysler" title="كرايزلر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="كرايزلر">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/بورش">
+                        <a class="gallerypic" href="/pic/بورش">
                             <img class="car_cont sprite-porsche" title="بورش" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="بورش">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/قطع غيار وملحقات">
+                        <a class="gallerypic" href="/pic/قطع غيار وملحقات">
                             <img class="car_cont sprite-parts" title="قطع غيار وملحقات" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="قطع غيار وملحقات">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>  
 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/شاحنات ومعدات ثقيلة">
+                        <a class="gallerypic" href="/pic/شاحنات ومعدات ثقيلة">
                             <img class="car_cont sprite-trucks" title="شاحنات ومعدات ثقيلة" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="شاحنات ومعدات ثقيلة">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/دبابات">
+                        <a class="gallerypic" href="/pic/دبابات">
                             <img class="car_cont sprite-bikes" title="دبابات" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="دبابات">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/سيارات تراثية">
+                        <a class="gallerypic" href="/pic/سيارات تراثية">
                             <img class="car_cont sprite-classic" title="سيارات تراثية" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات تراثية"> <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/سيارات مصدومه">
+                        <a class="gallerypic" href="/pic/سيارات مصدومه">
                             <img class="car_cont sprite-damaged" title="سيارات مصدومه" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات مصدومه"> <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="https://haraj.com.sa/pic/سيارات للتنازل">
+                        <a class="gallerypic" href="/pic/سيارات للتنازل">
                             <img class="car_cont sprite-tanazul" title="سيارات للتنازل" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات للتنازل"> <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
                     </div>
 
@@ -403,52 +403,52 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             </div>
             <hr>
             <ul class="nav nav-tabs">
-                <li class="active"><a href="https://haraj.com.sa/tags/">أجهزة</a></li>
+                <li class="active"><a href="/tags/">أجهزة</a></li>
             </ul>
             <br>
             <div>
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/ابل Apple">   <i class="fa fa-apple fa-3x"></i> </a>
+                    <a href="/tags/ابل Apple">   <i class="fa fa-apple fa-3x"></i> </a>
                 </div>
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/سامسونج Samsung" class="tag-cat"><i class="icon-Samsung fa-3x"></i></a>
+                    <a href="/tags/سامسونج Samsung" class="tag-cat"><i class="icon-Samsung fa-3x"></i></a>
                 </div>
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/بلاك بيري BlackBerry" class="tag-cat"><i class="icon-BlackBerry fa-3x"></i></a>
+                    <a href="/tags/بلاك بيري BlackBerry" class="tag-cat"><i class="icon-BlackBerry fa-3x"></i></a>
                 </div>
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/مايكروسوفت Microsoft" class="tag-cat"><i class="icon-Microsoft fa-3x"></i></a>
+                    <a href="/tags/مايكروسوفت Microsoft" class="tag-cat"><i class="icon-Microsoft fa-3x"></i></a>
                 </div>
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/فوجي فيلم fujifilm" class="tag-cat"><i class="icon-Fujifilm fa-3x"></i></a>
+                    <a href="/tags/فوجي فيلم fujifilm" class="tag-cat"><i class="icon-Fujifilm fa-3x"></i></a>
                 </div>
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/توشيبا Toshiba" class="tag-cat"><i class="icon-Toshiba fa-3x"></i></a>
-                </div>
-
-                <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/نوكيا Nokia" class="tag-cat"><i class="icon-Nokia fa-3x"></i></a>
+                    <a href="/tags/توشيبا Toshiba" class="tag-cat"><i class="icon-Toshiba fa-3x"></i></a>
                 </div>
 
                 <div class="glyph">
-
-                    <a href="https://haraj.com.sa/tags/كانون Canon" class="tag-cat"><i class="icon-Canon fa-3x"></i></a>
-                </div>
-                <div class="glyph">
-
-                    <a href="https://haraj.com.sa/tags/سوني Sony" class="tag-cat"><i class="icon-Sony fa-3x"></i></a>
-                </div>
-                <div class="glyph">
-
-                    <a href="https://haraj.com.sa/tags/ال جي LG" class="tag-cat"><i class="icon-LG fa-3x"></i></a>
+                    <a href="/tags/نوكيا Nokia" class="tag-cat"><i class="icon-Nokia fa-3x"></i></a>
                 </div>
 
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/اتش تي سي htc" class="tag-cat"><i class="icon-HTC fa-3x"></i></a>
+
+                    <a href="/tags/كانون Canon" class="tag-cat"><i class="icon-Canon fa-3x"></i></a>
+                </div>
+                <div class="glyph">
+
+                    <a href="/tags/سوني Sony" class="tag-cat"><i class="icon-Sony fa-3x"></i></a>
+                </div>
+                <div class="glyph">
+
+                    <a href="/tags/ال جي LG" class="tag-cat"><i class="icon-LG fa-3x"></i></a>
                 </div>
 
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/أرقام مميزة" class="tag-cat">أرقام مميزة</a>
+                    <a href="/tags/اتش تي سي htc" class="tag-cat"><i class="icon-HTC fa-3x"></i></a>
+                </div>
+
+                <div class="glyph">
+                    <a href="/tags/أرقام مميزة" class="tag-cat">أرقام مميزة</a>
                 </div>
                 <br> <br> <br>
             </div>
@@ -462,31 +462,31 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             <div>
                 <div class="glyph">
 
-                    <a href="https://haraj.com.sa/tags/أبل"><i class="icon-camel fa-3x"></i> </a>
+                    <a href="/tags/أبل"><i class="icon-camel fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/غنم"><i class="icon-sheep2 fa-3x"></i> </a>
+                    <a href="/tags/غنم"><i class="icon-sheep2 fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/ماعز"><i class="icon-goat fa-3x"></i> </a>
+                    <a href="/tags/ماعز"><i class="icon-goat fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/دجاج"><i class="icon-chicken fa-3x"></i> </a>
+                    <a href="/tags/دجاج"><i class="icon-chicken fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/قطط"><i class="icon-cat fa-3x"></i> </a>
+                    <a href="/tags/قطط"><i class="icon-cat fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/ببغاء"><i class="icon-parrot fa-3x"></i> </a>
+                    <a href="/tags/ببغاء"><i class="icon-parrot fa-3x"></i> </a>
                 </div>
                 <br>
                 <div class="glyph">
-                    <a href="https://haraj.com.sa/tags/اثاث"><i class="icon-athath fa-3x"></i> </a>
+                    <a href="/tags/اثاث"><i class="icon-athath fa-3x"></i> </a>
                 </div>
             </div>
             <div class="clear"></div>
@@ -496,21 +496,21 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             </ul>
             <br>
             <div>
-                <a title="اراضي للبيع" href="https://haraj.com.sa/tags/اراضي للبيع" class="tag">اراضي للبيع </a><br>
-                <a title="اراضي تجارية للبيع" href="https://haraj.com.sa/tags/اراضي تجارية للبيع" class="tag">اراضي تجارية للبيع </a><br>
-                <a title="شقق للايجار" href="https://haraj.com.sa/tags/شقق للايجار" class="tag">شقق للايجار </a><br>
-                <a title="شقق للبيع" href="https://haraj.com.sa/tags/شقق للبيع" class="tag">شقق للبيع </a><br>
-                <a title="فلل للبيع" href="https://haraj.com.sa/tags/فلل للبيع" class="tag">فلل للبيع </a><br>
-                <a title="فلل للايجار" href="https://haraj.com.sa/tags/فلل للايجار" class="tag">فلل للايجار </a><br>
-                <a title="عماره للايجار" href="https://haraj.com.sa/tags/عماره للايجار" class="tag">عماره للايجار </a><br>
-                <a title="محلات للتقبيل" href="https://haraj.com.sa/tags/محلات للتقبيل" class="tag">محلات للتقبيل </a><br>
-                <a title="محلات للايجار" href="https://haraj.com.sa/tags/محلات للايجار" class="tag">محلات للايجار </a><br>
-                <a title="مزارع للبيع" href="https://haraj.com.sa/tags/مزارع للبيع" class="tag">مزارع للبيع </a><br>
-                <a title="استراحات للبيع" href="https://haraj.com.sa/tags/استراحات للبيع" class="tag">استراحات للبيع </a><br>
-                <a title="استراحات للايجار" href="https://haraj.com.sa/tags/استراحات للايجار" class="tag">استراحات للايجار </a><br>
-                <a title="بيوت للبيع" href="https://haraj.com.sa/tags/بيوت للبيع" class="tag">بيوت للبيع </a><br>
-                <a title="بيوت للايجار" href="https://haraj.com.sa/tags/بيوت للايجار" class="tag">بيوت للايجار </a><br>
-                <a title="ادوار للايجار" href="https://haraj.com.sa/tags/ادوار للايجار" class="tag">ادوار للايجار </a><br>
+                <a title="اراضي للبيع" href="/tags/اراضي للبيع" class="tag">اراضي للبيع </a><br>
+                <a title="اراضي تجارية للبيع" href="/tags/اراضي تجارية للبيع" class="tag">اراضي تجارية للبيع </a><br>
+                <a title="شقق للايجار" href="/tags/شقق للايجار" class="tag">شقق للايجار </a><br>
+                <a title="شقق للبيع" href="/tags/شقق للبيع" class="tag">شقق للبيع </a><br>
+                <a title="فلل للبيع" href="/tags/فلل للبيع" class="tag">فلل للبيع </a><br>
+                <a title="فلل للايجار" href="/tags/فلل للايجار" class="tag">فلل للايجار </a><br>
+                <a title="عماره للايجار" href="/tags/عماره للايجار" class="tag">عماره للايجار </a><br>
+                <a title="محلات للتقبيل" href="/tags/محلات للتقبيل" class="tag">محلات للتقبيل </a><br>
+                <a title="محلات للايجار" href="/tags/محلات للايجار" class="tag">محلات للايجار </a><br>
+                <a title="مزارع للبيع" href="/tags/مزارع للبيع" class="tag">مزارع للبيع </a><br>
+                <a title="استراحات للبيع" href="/tags/استراحات للبيع" class="tag">استراحات للبيع </a><br>
+                <a title="استراحات للايجار" href="/tags/استراحات للايجار" class="tag">استراحات للايجار </a><br>
+                <a title="بيوت للبيع" href="/tags/بيوت للبيع" class="tag">بيوت للبيع </a><br>
+                <a title="بيوت للايجار" href="/tags/بيوت للايجار" class="tag">بيوت للايجار </a><br>
+                <a title="ادوار للايجار" href="/tags/ادوار للايجار" class="tag">ادوار للايجار </a><br>
             </div>
             <div class="clear"></div>
             <hr>

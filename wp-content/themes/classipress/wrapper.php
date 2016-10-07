@@ -34,6 +34,7 @@
         wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.css',false,'1.1','all');
         wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.js',false,'1.1','all');
         wp_enqueue_style( 'custome', get_template_directory_uri() . '/styles/custome.css',false,'1.1','all');
+        wp_enqueue_style( 'custome', get_template_directory_uri() . '/styles/blue.css',false,'1.1','all');
         ?>
         
 
