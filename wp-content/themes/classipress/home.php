@@ -55,10 +55,17 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                             <button href="#" id="grid" class="btn btn-primary active">
                                 <i class="fa fa-globe"></i>
                             </button>
+                            <a href="#" class="btn btn-success btn-lg pull-right btn_add"> <i class="fa fa-plus "></i><font><font class=""> Post your ad with us</font></font></a>
                         </div>
                     </div>
-                    <div id="products" class="row list-group">
-                        <div class="item  col-xs-4 col-lg-4">
+                    <div id="products" class="row list-group padding-top-4per">
+                        <div class="item col-md-12 nav-hide list-group-item">
+                            <div class="col-md-2">Before</div>
+                            <div class="col-md-2">Declared</div>
+                            <div class="col-md-2">City</div>
+                            <div class="col-md-6">Offer</div>
+                        </div>
+                        <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
                                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
@@ -79,7 +86,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                                 </div>
                             </div>
                         </div>
-                        <div class="item  col-xs-4 col-lg-4">
+                        <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
                                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
@@ -100,7 +107,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                                 </div>
                             </div>
                         </div>
-                        <div class="item  col-xs-4 col-lg-4">
+                        <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
                                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
@@ -121,7 +128,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                                 </div>
                             </div>
                         </div>
-                        <div class="item  col-xs-4 col-lg-4">
+                        <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
                                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
@@ -142,7 +149,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                                 </div>
                             </div>
                         </div>
-                        <div class="item  col-xs-4 col-lg-4">
+                        <div class="item  col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
                                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
@@ -163,7 +170,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                                 </div>
                             </div>
                         </div>
-                        <div class="item  col-xs-4 col-lg-4">
+                        <div class="item  col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
                                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
@@ -521,16 +528,5 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
 
     <!-- /content -->
     <script>
-        jQuery(document).ready(function () {
-//            alert('a');
-            jQuery('#list').click(function (event) {
-                event.preventDefault();
-                jQuery('#products .item').addClass('list-group-item');
-            });
-            jQuery('#grid').click(function (event) {
-                event.preventDefault();
-                jQuery('#products .item').removeClass('list-group-item');
-                jQuery('#products .item').addClass('grid-group-item');
-            });
-        });
+
     </script>

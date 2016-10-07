@@ -11,147 +11,153 @@
 
 <div class="content">
 
-	<div class="content_botbg">
+    <div class="content_botbg">
 
-		<div class="content_res">
+        <div class="content_ads">
 
-			<div id="breadcrumb"><?php cp_breadcrumb(); ?></div>
+            <div id="breadcrumb"><?php cp_breadcrumb(); ?></div>
 
-			<div class="clr"></div>
+            <div class="clr"></div>
 
-			<div class="content_left">
+            <div class="content_left_ads">
 
-				<?php do_action( 'appthemes_notices' ); ?>
+                <?php do_action('appthemes_notices'); ?>
 
-				<?php appthemes_before_loop(); ?>
+                <?php appthemes_before_loop(); ?>
 
-				<?php if ( have_posts() ) : ?>
+                <?php if (have_posts()) : ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-						<?php appthemes_before_post(); ?>
+                        <?php appthemes_before_post(); ?>
 
-						<?php appthemes_stats_update( $post->ID ); //records the page hit ?>
+                        <?php appthemes_stats_update($post->ID); //records the page hit ?>
 
-						<div class="shadowblock_out <?php cp_display_style( 'featured' ); ?>">
+                        <div class="shadowblock_out <?php cp_display_style('featured'); ?>">
 
-							<div class="shadowblock">
+                            <div class="shadowblock">
 
-								<?php appthemes_before_post_title(); ?>
+                                <?php appthemes_before_post_title(); ?>
 
-								<h1 class="single-listing"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+                                <h1 class="single-listing"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 
-								<div class="clr"></div>
+                                <div class="clr"></div>
 
-								<?php appthemes_after_post_title(); ?>
+                                <?php appthemes_after_post_title(); ?>
 
-								<div class="pad5 dotted"></div>
+                                <div class="pad5 dotted"></div>
 
-								<div class="bigright <?php cp_display_style( 'ad_single_images' ); ?>">
+                                <div class="bigright <?php cp_display_style('ad_single_images'); ?>">
 
-									<ul>
+                                    <ul>
 
-									<?php
-										// grab the category id for the functions below
-										$cat_id = appthemes_get_custom_taxonomy( $post->ID, APP_TAX_CAT, 'term_id' );
+                                        <?php
+                                        // grab the category id for the functions below
+                                        $cat_id = appthemes_get_custom_taxonomy($post->ID, APP_TAX_CAT, 'term_id');
 
-										if ( get_post_meta( $post->ID, 'cp_ad_sold', true ) == 'yes' ) {
-									?>
-											<li id="cp_sold"><span><?php _e( 'This item has been sold', APP_TD ); ?></span></li>
-									<?php
-										}
+                                        if (get_post_meta($post->ID, 'cp_ad_sold', true) == 'yes') {
+                                            ?>
+                                            <li id="cp_sold"><span><?php _e('This item has been sold', APP_TD); ?></span></li>
+                                            <?php
+                                        }
 
-										// 3.0+ display the custom fields instead (but not text areas)
-										cp_get_ad_details( $post->ID, $cat_id );
-									?>
+                                        // 3.0+ display the custom fields instead (but not text areas)
+                                        cp_get_ad_details($post->ID, $cat_id);
+                                        ?>
 
-										<li id="cp_listed"><span><?php _e( 'Listed:', APP_TD ); ?></span> <?php echo appthemes_display_date( $post->post_date ); ?></li>
-									<?php if ( $expire_date = get_post_meta( $post->ID, 'cp_sys_expire_date', true ) ) { ?>
-										<li id="cp_expires"><span><?php _e( 'Expires:', APP_TD ); ?></span> <?php echo cp_timeleft( $expire_date ); ?></li>
-									<?php } ?>
+                                        <li id="cp_listed"><span><?php _e('Listed:', APP_TD); ?></span> <?php echo appthemes_display_date($post->post_date); ?></li>
+                                        <?php if ($expire_date = get_post_meta($post->ID, 'cp_sys_expire_date', true)) { ?>
+                                            <li id="cp_expires"><span><?php _e('Expires:', APP_TD); ?></span> <?php echo cp_timeleft($expire_date); ?></li>
+                                        <?php } ?>
 
-									</ul>
+                                    </ul>
 
-								</div><!-- /bigright -->
+                                </div><!-- /bigright -->
 
 
-								<?php if ( $cp_options->ad_images ) { ?>
+                                <?php if ($cp_options->ad_images) { ?>
 
-									<div class="bigleft">
+                                    <div class="bigleft">
 
-										<div id="main-pic">
+                                        <div id="main-pic">
 
-											<?php cp_get_image_url(); ?>
+                                            <?php cp_get_image_url(); ?>
 
-											<div class="clr"></div>
+                                            <div class="clr"></div>
 
-										</div>
+                                        </div>
 
-										<div id="thumbs-pic">
+                                        <div id="thumbs-pic">
 
-											<?php cp_get_image_url_single( $post->ID, 'thumbnail', $post->post_title, -1 ); ?>
+                                            <?php cp_get_image_url_single($post->ID, 'thumbnail', $post->post_title, -1); ?>
 
-											<div class="clr"></div>
+                                            <div class="clr"></div>
 
-										</div>
+                                        </div>
 
-									</div><!-- /bigleft -->
+                                    </div><!-- /bigleft -->
 
-								<?php } ?>
+                                <?php } ?>
 
-								<div class="clr"></div>
+                                <div class="clr"></div>
 
-								<?php appthemes_before_post_content(); ?>
+                                <?php appthemes_before_post_content(); ?>
 
-								<div class="single-main">
+                                <div class="single-main">
 
-									<?php
-										// 3.0+ display text areas in content area before content.
-										cp_get_ad_details( $post->ID, $cat_id, 'content' );
-									?>
+                                    <?php
+                                    // 3.0+ display text areas in content area before content.
+                                    cp_get_ad_details($post->ID, $cat_id, 'content');
+                                    ?>
 
-									<h3 class="description-area"><?php _e( 'Description', APP_TD ); ?></h3>
+                                    <h3 class="description-area"><?php _e('Description', APP_TD); ?></h3>
 
-									<?php the_content(); ?>
+                                    <?php the_content(); ?>
 
-								</div>
+                                </div>
 
-								<?php appthemes_after_post_content(); ?>
+                                <?php appthemes_after_post_content(); ?>
+                                <div class="col-md-12 border-top-gray share_icon padding-0">
+                                    <div class="col-md-2"><i class="fa fa-twitter  fa-2x"></i></div>
+                                    <div class="col-md-2"><img class="fa-2x" width="30px" src="<?php echo get_template_directory_uri(); ?>/images/whatsapp.png"></div>
+                                    <div class="col-md-2"><i class="fa fa-flag fa-2x"></i></div>
+                                    <div class="col-md-2"><i class="fa fa-2x fa-heart" aria-hidden="true"></i></div>
+                                    <div class="col-md-2"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></div>
+                                </div>
+                            </div><!-- /shadowblock -->
 
-							</div><!-- /shadowblock -->
+                        </div><!-- /shadowblock_out -->
 
-						</div><!-- /shadowblock_out -->
+                        <?php appthemes_after_post(); ?>
 
-						<?php appthemes_after_post(); ?>
+                    <?php endwhile; ?>
 
-					<?php endwhile; ?>
+                    <?php appthemes_after_endwhile(); ?>
 
-					<?php appthemes_after_endwhile(); ?>
+                <?php else: ?>
 
-				<?php else: ?>
+                    <?php appthemes_loop_else(); ?>
 
-					<?php appthemes_loop_else(); ?>
+                <?php endif; ?>
 
-				<?php endif; ?>
+                <div class="clr"></div>
 
-				<div class="clr"></div>
+                <?php appthemes_after_loop(); ?>
 
-				<?php appthemes_after_loop(); ?>
+                <?php wp_reset_query(); ?>
 
-				<?php wp_reset_query(); ?>
+                <div class="clr"></div>
 
-				<div class="clr"></div>
+                <?php comments_template('/comments-ad_listing.php'); ?>
 
-				<?php comments_template( '/comments-ad_listing.php' ); ?>
+            </div><!-- /content_left -->
 
-			</div><!-- /content_left -->
+            <?php get_sidebar('ad'); ?>
 
-			<?php get_sidebar( 'ad' ); ?>
+            <div class="clr"></div>
 
-			<div class="clr"></div>
+        </div><!-- /content_res -->
 
-		</div><!-- /content_res -->
-
-	</div><!-- /content_botbg -->
+    </div><!-- /content_botbg -->
 
 </div><!-- /content -->
