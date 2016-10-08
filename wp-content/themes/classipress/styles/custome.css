@@ -53,6 +53,7 @@ hr {
 }
 .header_menu {
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 @media (min-width: 768px){
     .navbar-nav > li {
@@ -80,7 +81,7 @@ hr {
     padding: 0;
 }
 .margin-0{
-    margin: 0;
+    margin: 0 !important;
 }
 .font-16{
     font-size: 16px;
@@ -139,6 +140,19 @@ a.city-head {
 .main-content-area .nav-tabs > li {
     width: 20%;
     text-align: center;
+}
+.nav-hide{
+    background-color: #0473c0 !important;
+    padding: 5px;
+}
+.title_nav{
+    font-size: 16px;
+    font-weight: 700;
+    color: #b9daf1;
+}
+.fa-camera-retro.black:hover {
+    outline: black;
+    border-bottom: 1px solid;
 }
 .main-content-area > .nav-area > ul > li > a,.main-content-area > .nav-area > ul > li > a{
     font-size: 14px;
@@ -245,20 +259,23 @@ a.gallerypic:hover span.pic-icon{
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
+    border: none;
 }
 
 .item.list-group-item
 {
     float: none;
     width: 100%;
-    background-color: #fff;
+    background-color: #F7FBFA;
     margin-bottom: 10px;
 }
 .item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
 {
-    background: #428bca;
+    background: #f5f5f5;;
 }
-
+.black{
+    color: #000;
+}
 .item.list-group-item .list-group-image
 {
     margin-right: 10px;
@@ -269,13 +286,15 @@ a.gallerypic:hover span.pic-icon{
 }
 .item.list-group-item .caption
 {
-    padding: 9px 9px 0px 9px;
+    padding: 0px;
 }
 .item.list-group-item:nth-of-type(odd)
 {
-    background: #eeeeee;
+    background: #FFFEF7;
 }
-
+.font-18{
+    font-size: 18px;
+}
 .item.list-group-item:before, .item.list-group-item:after
 {
     display: table;
@@ -294,5 +313,98 @@ a.gallerypic:hover span.pic-icon{
 {
     margin: 0 0 11px;
 }
-
+.offer{
+    font-size: 14pt;
+    font-weight: bold;
+    color: #009933;
+    white-space: nowrap;
+    width: 82%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.offer:hover{
+    border-bottom: 1px solid;    
+}
+#search-bar{
+    display: none;
+}
+#main-pic img {
+    width: 100%;
+}
+.ad_div .ad_high h3 {
+    font-family: "Times New Roman",Times,serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+.comment_header {
+    color: #999999;
+    /* font: 12pt/1.5 Arial,Verdana; */
+    font: 16pt Arial,Verdana;
+    line-height: 1.6;
+}
+.ad_high {
+    background: #F8F6E7;
+    border: 1px solid #EBE6CF;
+    border-bottom: 2px solid #EBE6CF;
+    font: 16pt;
+}
+.shadowblock{
+    padding: 0px;
+}
+.padding-top-20{
+    padding-top: 20px;
+}
+.padding-20{
+    padding: 20px;
+}
+.border-bottom-gray{
+    border-bottom: 1px solid #ccc;
+}
+.label-success {
+    background-color: #4cae4c;
+}
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.shadowblock{
+    background: #fcfcf9;
+    border: none;
+}
+.bigright{
+    padding-right: 10px;
+}
+.content_login{
+    margin: 0px auto;
+    width: 40%;
+}
+.loginform p label{
+    float: none;
+}
+.content_login .shadowblock_out{
+    border: none;
+}
+.content_login .shadowblock{
+    background-color: #fff;
+}
+.page-template-tpl-login-php .footer{
+    display: none;
+}
+.loggin_name{
+    padding-top: 10px;
+}
+#login{
+    margin-top: 5px;
+}
+.password{
+    padding-top: 5px;
+}
 /* end main content */

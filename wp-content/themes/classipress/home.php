@@ -55,142 +55,148 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                             <button href="#" id="grid" class="btn btn-primary active">
                                 <i class="fa fa-globe"></i>
                             </button>
-                            <a href="#" class="btn btn-success btn-lg pull-right btn_add"> <i class="fa fa-plus "></i><font><font class=""> Post your ad with us</font></font></a>
+                            <a href="<?php echo get_site_url(); ?>/login" class="btn btn-success btn-lg pull-right btn_add"> <i class="fa fa-plus "></i><font><font class=""> Post your ad with us</font></font></a>
                         </div>
                     </div>
-                    <div id="products" class="row list-group padding-top-4per">
-                        <div class="item col-md-12 nav-hide list-group-item">
-                            <div class="col-md-2">Before</div>
-                            <div class="col-md-2">Declared</div>
-                            <div class="col-md-2">City</div>
-                            <div class="col-md-6">Offer</div>
+                    <div id="products" class="row margin-0 list-group padding-top-4per">
+                        <div class="item col-md-12 nav-hide list-group-item margin-0">
+                            <div class="col-md-2 title_nav">Before</div>
+                            <div class="col-md-2 title_nav">Declared</div>
+                            <div class="col-md-2 title_nav">City</div>
+                            <div class="col-md-6 title_nav">Offer</div>
                         </div>
                         <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
-                                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                                <img class="group list-group-image hide" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
-                                    <h4 class="group inner list-group-item-heading">
-                                        Product title</h4>
-                                    <p class="group inner list-group-item-text">
-                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-md-6">
-                                            <p class="lead">
-                                                $21.000</p>
-                                        </div>
-                                        <div class="col-xs-12 col-md-6">
-                                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                        </div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-text col-md-6">
+                                        <a href="<?php echo get_site_url(); ?>/ads/my-first-classified-ad/">
+                                            <i class="fa fa-camera-retro font-18 black pull-left"></i>
+                                            <div class="offer">
+                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                       
                         <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
-                                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                                <img class="group list-group-image hide" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
-                                    <h4 class="group inner list-group-item-heading">
-                                        Product title</h4>
-                                    <p class="group inner list-group-item-text">
-                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-md-6">
-                                            <p class="lead">
-                                                $21.000</p>
-                                        </div>
-                                        <div class="col-xs-12 col-md-6">
-                                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                        </div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-text col-md-6">
+                                        <a href="<?php echo get_site_url(); ?>/ads/my-first-classified-ad/">
+                                            <i class="fa fa-camera-retro font-18 black pull-left"></i>
+                                            <div class="offer">
+                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                       
                         <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
-                                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                                <img class="group list-group-image hide" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
-                                    <h4 class="group inner list-group-item-heading">
-                                        Product title</h4>
-                                    <p class="group inner list-group-item-text">
-                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-md-6">
-                                            <p class="lead">
-                                                $21.000</p>
-                                        </div>
-                                        <div class="col-xs-12 col-md-6">
-                                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                        </div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-text col-md-6">
+                                        <a href="<?php echo get_site_url(); ?>/ads/my-first-classified-ad/">
+                                            <i class="fa fa-camera-retro font-18 black pull-left"></i>
+                                            <div class="offer">
+                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                       
                         <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
-                                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                                <img class="group list-group-image hide" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
-                                    <h4 class="group inner list-group-item-heading">
-                                        Product title</h4>
-                                    <p class="group inner list-group-item-text">
-                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-md-6">
-                                            <p class="lead">
-                                                $21.000</p>
-                                        </div>
-                                        <div class="col-xs-12 col-md-6">
-                                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                        </div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-text col-md-6">
+                                        <a href="<?php echo get_site_url(); ?>/ads/my-first-classified-ad/">
+                                            <i class="fa fa-camera-retro font-18 black pull-left"></i>
+                                            <div class="offer">
+                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item  col-xs-4 col-lg-4 list-group-item">
+                        </div>                       
+                        <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
-                                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                                <img class="group list-group-image hide" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
-                                    <h4 class="group inner list-group-item-heading">
-                                        Product title</h4>
-                                    <p class="group inner list-group-item-text">
-                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-md-6">
-                                            <p class="lead">
-                                                $21.000</p>
-                                        </div>
-                                        <div class="col-xs-12 col-md-6">
-                                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                        </div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-text col-md-6">
+                                        <a href="<?php echo get_site_url(); ?>/ads/my-first-classified-ad/">
+                                            <i class="fa fa-camera-retro font-18 black pull-left"></i>
+                                            <div class="offer">
+                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item  col-xs-4 col-lg-4 list-group-item">
+                        </div>                       
+                        <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
-                                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                                <img class="group list-group-image hide" src="http://placehold.it/400x250/000/fff" alt="" />
                                 <div class="caption">
-                                    <h4 class="group inner list-group-item-heading">
-                                        Product title</h4>
-                                    <p class="group inner list-group-item-text">
-                                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-md-6">
-                                            <p class="lead">
-                                                $21.000</p>
-                                        </div>
-                                        <div class="col-xs-12 col-md-6">
-                                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                                        </div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-heading col-md-2">
+                                        Product title</div>
+                                    <div class="group inner list-group-item-text col-md-6">
+                                        <a href="<?php echo get_site_url(); ?>/ads/my-first-classified-ad/">
+                                            <i class="fa fa-camera-retro font-18 black pull-left"></i>
+                                            <div class="offer">
+                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                       
                     </div>
                 </div>
 
