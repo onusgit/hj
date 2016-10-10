@@ -296,6 +296,7 @@ function custom_script() {
                 jQuery('.list-group-image').addClass('hide');
                 jQuery('.list-group-item-heading').addClass('col-md-2');
                 jQuery('.list-group-item-text').addClass('col-md-6');
+                jQuery('.main-col').removeClass('hide');
                 jQuery('.thumbnail').css('border','none');
                 
             });
@@ -308,6 +309,7 @@ function custom_script() {
                 jQuery('.list-group-image').removeClass('hide');
                 jQuery('.list-group-item-text').removeClass('col-md-6');
                 jQuery('.list-group-item-heading').removeClass('col-md-2');
+                jQuery('.main-col').addClass('hide');
                 jQuery('.thumbnail').css('border','1px solid #ccc');
             });
         });

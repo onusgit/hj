@@ -28,7 +28,20 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                     </div>
                     <div id="menu1" class="tab-pane fade">
                         <h3>التسجيل بالموقع</h3>
-                        <p>Some content in menu 1.</p>
+                        <div class="main-col">
+                            <div class="row img_carousel">
+                                <ul>
+                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
+                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
+                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
+                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
+                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
+                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
+                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
+                                </ul>
+                                <p class="text-left"><b><a class="red" href="#">السيارات المصورة   </a></b></p>
+                            </div>
+                        </div>
                     </div>
                     <div id="menu2" class="tab-pane fade">
                         <h3>التسجيل بالموقع</h3>

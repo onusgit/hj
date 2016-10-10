@@ -407,4 +407,33 @@ a.gallerypic:hover span.pic-icon{
 .password{
     padding-top: 5px;
 }
+.img_carousel ul {
+    list-style-type: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.img_carousel ul li {
+    height: 100%;
+}
+.img_carousel ul li {
+    display: inline-block;
+}
+.img_carousel ul li a img {
+    border: 1px solid #F2F2F2;
+    display: block;
+    max-width: 100%;
+}
+.img_carousel li img {
+    height: 160px;
+    width: 170px;
+}
+.img-rounded {
+    border-radius: 6px;
+}
+img {
+    vertical-align: middle;
+}
 /* end main content */
