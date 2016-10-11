@@ -9,31 +9,41 @@
 global $cp_options;
 ?>
 <div class="item col-xs-4 col-lg-4 list-group-item">
-    <div class="thumbnail">
-        <img class="group list-group-image hide" src="http://placehold.it/400x250/000/fff" alt="" />
-        <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>
+    <div class="thumbnail">        
+        <div class="group list-group-image hide">
+            <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
+        </div>        
         <div class="caption">
             <div class="group inner list-group-item-heading col-md-2">
-                Product title</div>
+                <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . __(' ago'); ?>
+            </div>
             <div class="group inner list-group-item-heading col-md-2">
-                Product title</div>
+               <?php echo get_the_author(); ?></div>
             <div class="group inner list-group-item-heading col-md-2">
-                Product title</div>
+                <?php 
+                $post_meta = get_post_meta(get_the_ID());
+                if(isset($post_meta['cp_city'][0]) && !empty($post_meta['cp_city'][0])):
+                    echo $post_meta['cp_city'][0];
+                endif;                
+                ?>
+            </div>
             <div class="group inner list-group-item-text col-md-6">
                 <a href="<?php the_permalink(); ?>">
                     <i class="fa fa-camera-retro font-18 black pull-left"></i>
+                    <div class="offer">
                     <?php
                     if (mb_strlen(get_the_title()) >= 75)
                         echo mb_substr(get_the_title(), 0, 75) . '...';
                     else
                         the_title();
                     ?>
+                    </div>
                 </a>
-
-            </div>
+            </div>            
         </div>
     </div>
 </div>  
+<?php /* 
 <div class="post-block-out <?php cp_display_style('featured'); ?>">
 
     <div class="post-block">
@@ -79,3 +89,4 @@ global $cp_options;
     </div><!-- /post-block -->
 
 </div><!-- /post-block-out -->
+*/ ?>
