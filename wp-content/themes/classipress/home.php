@@ -57,7 +57,6 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                     </div>
                 </div>
             </div>
-            <?php echo do_shortcode("[pt_view id=b9aca17dnr]"); ?>
             <div class="grid-list">
                 <div class="container padding-0">
                     <div class="list-grid-icon">
@@ -78,6 +77,22 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                             <div class="col-md-2 title_nav">City</div>
                             <div class="col-md-6 title_nav">Offer</div>
                         </div>
+                         
+                        <?php
+                        // show all ads but make sure the sticky featured ads don't show up first
+                        $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+                        query_posts(array('post_type' => APP_POST_TYPE, 'ignore_sticky_posts' => 1, 'paged' => $paged));
+                        $total_pages = max(1, absint($wp_query->max_num_pages));
+                        ?>
+
+                        <?php get_template_part('loop', 'ad_listing'); ?>
+
+                        <?php
+                        if ($total_pages > 1) {
+                            ?>
+                            <div class="paging"><a href="<?php echo $post_type_url; ?>"> <?php _e('View More Ads', APP_TD); ?> </a></div>
+                        <?php } ?>
+                            
                         <div class="item col-xs-4 col-lg-4 list-group-item">
                             <div class="thumbnail">
                                 <img class="group list-group-image hide" src="http://placehold.it/400x250/000/fff" alt="" />
