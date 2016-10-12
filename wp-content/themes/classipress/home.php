@@ -15,11 +15,11 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
         <div class="main-content-area">
             <div class="nav-area">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#home">التسجيل بالموقع</a></li>
-                    <li><a data-toggle="tab" href="#menu1">التسجيل بالموقع</a></li>
-                    <li><a data-toggle="tab" href="#menu2">التسجيل بالموقع</a></li>
-                    <li><a data-toggle="tab" href="#menu3">التسجيل بالموقع</a></li>
-                    <li><a data-toggle="tab" href="#menu4">التسجيل بالموقع</a></li>
+                    <li class="active"><a data-toggle="tab" href="#home">كل الإعلانات</a></li>
+                    <li><a data-toggle="tab" href="#menu1">حراج السيارات</a></li>
+                    <li><a data-toggle="tab" href="#menu2">حراج الأجهزة</a></li>
+                    <li><a data-toggle="tab" href="#menu3">العقار </a></li>
+                    <li><a data-toggle="tab" href="#menu4">أخرى</a></li>
                 </ul>
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
@@ -400,25 +400,30 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             </ul>
             <br>
             <div>
-                <a title="اراضي للبيع" href="/tags/اراضي للبيع" class="tag">اراضي للبيع </a><br>
-                <a title="اراضي تجارية للبيع" href="/tags/اراضي تجارية للبيع" class="tag">اراضي تجارية للبيع </a><br>
-                <a title="شقق للايجار" href="/tags/شقق للايجار" class="tag">شقق للايجار </a><br>
-                <a title="شقق للبيع" href="/tags/شقق للبيع" class="tag">شقق للبيع </a><br>
-                <a title="فلل للبيع" href="/tags/فلل للبيع" class="tag">فلل للبيع </a><br>
-                <a title="فلل للايجار" href="/tags/فلل للايجار" class="tag">فلل للايجار </a><br>
-                <a title="عماره للايجار" href="/tags/عماره للايجار" class="tag">عماره للايجار </a><br>
-                <a title="محلات للتقبيل" href="/tags/محلات للتقبيل" class="tag">محلات للتقبيل </a><br>
-                <a title="محلات للايجار" href="/tags/محلات للايجار" class="tag">محلات للايجار </a><br>
-                <a title="مزارع للبيع" href="/tags/مزارع للبيع" class="tag">مزارع للبيع </a><br>
-                <a title="استراحات للبيع" href="/tags/استراحات للبيع" class="tag">استراحات للبيع </a><br>
-                <a title="استراحات للايجار" href="/tags/استراحات للايجار" class="tag">استراحات للايجار </a><br>
-                <a title="بيوت للبيع" href="/tags/بيوت للبيع" class="tag">بيوت للبيع </a><br>
-                <a title="بيوت للايجار" href="/tags/بيوت للايجار" class="tag">بيوت للايجار </a><br>
-                <a title="ادوار للايجار" href="/tags/ادوار للايجار" class="tag">ادوار للايجار </a><br>
+                <?php
+                /*[0] => WP_Term Object
+        (
+            [term_id] => 3
+            [name] => ad tag1
+            [slug] => ad-tag1
+            [term_group] => 0
+            [term_taxonomy_id] => 3
+            [taxonomy] => ad_tag
+            [description] => 
+            [parent] => 0
+            [count] => 1
+            [filter] => raw
+        )*/
+                $tags_array = get_tags();
+                $tags_array = get_terms('ad_tag', array('hide_empty' => false));
+                foreach ($tags_array as $t):
+                    echo '<a title="' . $t->name . '" href="" class="tag">' . $t->name . '#</a><br>';
+                endforeach;
+                ?>                
             </div>
             <div class="clear"></div>
             <hr>
-            <h3><a href="http://montada.haraj.com.sa">منتدى السيارات </a></h3>
+            <h3><a href="#">منتدى السيارات </a></h3>
         </div>
     </div>
 
