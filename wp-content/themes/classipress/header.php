@@ -50,13 +50,13 @@ global $cp_options;
                 <span class="icon-bar"></span>
             </button>
             <p class="navbar-text navbar-right visible-xs ">
-                <a href="https://haraj.com.sa/login.php" class="pull-left visible-xs ">دخول  </a>
-                <a href="https://haraj.com.sa/advsearch.php" class="pull-left visible-xs "><i class="fa fa-search"></i></a>
+                <a href="<?php echo get_site_url(); ?>/login" class="pull-left visible-xs ">دخول  </a>
+                <a href="/advsearch.php" class="pull-left visible-xs "><i class="fa fa-search"></i></a>
             </p>
             <div class="collapse navbar-collapse navbar-ex1-collapse col-md-9">
                 <ul class="nav navbar-nav menu">
-                    <li><a href="login.php">تسجيل الدخول  </a></li>
-                    <li><a href="register.php"> التسجيل بالموقع</a></li>
+                    <li><a href="<?php echo get_site_url(); ?>/login">تسجيل الدخول  </a></li>
+                    <li><a href="<?php echo get_site_url(); ?>/register"> التسجيل بالموقع</a></li>
                     <li class=" "><a href="commission.php">حساب عمولة الموقع</a></li>
                     <li class="divider visible-xs"></li>
                     <li class="visible-xs"><a href="#"> حراج السيارات</a></li>
