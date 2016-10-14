@@ -7,8 +7,11 @@
  * @since   ClassiPress 3.0
  */
 ?>
-
-
+ <?php 
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$actual_link = explode('/',urldecode($actual_link));
+$current_page = end(array_filter($actual_link));
+?>
 <div class="content">
     <div class="col-md-9">
         <div class="main-content-area">
@@ -78,10 +81,10 @@
                         </div>
 
                         <?php
-                        // show all ads but make sure the sticky featured ads don't show up first
-                        $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-                        query_posts(array('post_type' => APP_POST_TYPE, 'ignore_sticky_posts' => 1, 'paged' => $paged));
-                        $total_pages = max(1, absint($wp_query->max_num_pages));
+//                        // show all ads but make sure the sticky featured ads don't show up first
+//                        $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+//                        query_posts(array('post_type' => APP_POST_TYPE, 'ignore_sticky_posts' => 1, 'paged' => $paged));
+//                        $total_pages = max(1, absint($wp_query->max_num_pages));
                         get_template_part('loop', 'ad_listing');
                         if ($total_pages > 1) {
                             ?>
@@ -96,6 +99,7 @@
     <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 round-border bg-grey">
         <p class="moreoptions showhideside" style="display: none;width:30%;margin-right:10px">إظهار الخيارات</p>
         <div class="side-col  ">
+            <?php if($current_page == 'حراج-السيارات'):?>
             <form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="post" action="/process-more-models.php">
                 <select class="form-control margin-top-10" name="city" id="marka">
                     <option value="marka">أختر ماركة السيارة</option>
@@ -303,8 +307,10 @@
                     </div>
 
                 </div>
-            </div>
+            </div>            
             <hr>
+            <?php elseif($current_page == 'أجهزة'):?>
+            
             <ul class="nav nav-tabs">
                 <li class="active"><a href="/tags/">أجهزة</a></li>
             </ul>
@@ -358,6 +364,8 @@
 
             <div class="clear"></div>
             <hr>
+            <?php elseif($current_page == 'مواشي-و-حيوانات-و-طيور'):?>
+            
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#">أقسام أخرى</a></li>
             </ul>
@@ -394,6 +402,8 @@
             </div>
             <div class="clear"></div>
             <hr>
+            <?php elseif($current_page == 'عقارات'):?>
+            
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#">عقارات</a></li>
             </ul>
@@ -420,9 +430,8 @@
                 endforeach;
                 ?>                
             </div>
-            <div class="clear"></div>
-            <hr>
-            <h3><a href="#">منتدى السيارات </a></h3>
+            <div class="clear"></div>            
+            <?php endif;?>
         </div>
     </div>
 </div>

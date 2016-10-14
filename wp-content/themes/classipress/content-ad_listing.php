@@ -8,10 +8,12 @@
  */
 global $cp_options;
 ?>
+
 <div class="item col-xs-4 col-lg-4 list-group-item">
     <div class="thumbnail">        
         <div class="group list-group-image hide">
-            <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
+            <?php            
+            if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
         </div>        
         <div class="caption">
             <div class="group inner list-group-item-heading col-md-2">
@@ -29,13 +31,18 @@ global $cp_options;
             </div>
             <div class="group inner list-group-item-text col-md-6">
                 <a href="<?php the_permalink(); ?>">
-                    <i class="fa fa-camera-retro font-18 black pull-left"></i>
+                    
                     <div class="offer">
                     <?php
-                    if (mb_strlen(get_the_title()) >= 75)
-                        echo mb_substr(get_the_title(), 0, 75) . '...';
-                    else
-                        the_title();
+                    if (mb_strlen(get_the_title()) >= 75):
+                        echo mb_substr(get_the_title(), 0, 75) . '...';?>
+                        <i class="fa  <?php if(cp_ad_loop_thumbnail_check() == 1): echo 'fa-camera-retro'; endif;?> font-18 black"></i>
+                        <?php
+                    else:
+                        the_title();?>
+                        <i class="fa  <?php if(cp_ad_loop_thumbnail_check() == 1): echo 'fa-camera-retro'; endif;?> font-18 black"></i>
+                        <?php
+                    endif;
                     ?>
                     </div>
                 </a>
