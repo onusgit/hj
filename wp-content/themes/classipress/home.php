@@ -401,19 +401,19 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             <br>
             <div>
                 <?php
-                /*[0] => WP_Term Object
-        (
-            [term_id] => 3
-            [name] => ad tag1
-            [slug] => ad-tag1
-            [term_group] => 0
-            [term_taxonomy_id] => 3
-            [taxonomy] => ad_tag
-            [description] => 
-            [parent] => 0
-            [count] => 1
-            [filter] => raw
-        )*/
+                /* [0] => WP_Term Object
+                  (
+                  [term_id] => 3
+                  [name] => ad tag1
+                  [slug] => ad-tag1
+                  [term_group] => 0
+                  [term_taxonomy_id] => 3
+                  [taxonomy] => ad_tag
+                  [description] =>
+                  [parent] => 0
+                  [count] => 1
+                  [filter] => raw
+                  ) */
                 $tags_array = get_tags();
                 $tags_array = get_terms('ad_tag', array('hide_empty' => false));
                 foreach ($tags_array as $t):
@@ -427,8 +427,5 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
         </div>
     </div>
 
-
+</div>
     <!-- /content -->
-    <script>
-
-    </script>
