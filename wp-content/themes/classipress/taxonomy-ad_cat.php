@@ -17,11 +17,11 @@ $current_page = end(array_filter($actual_link));
         <div class="main-content-area">
             <div class="nav-area">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#home">كل الإعلانات</a></li>
-                    <li><a data-toggle="tab" href="#menu1">حراج السيارات</a></li>
-                    <li><a data-toggle="tab" href="#menu2">حراج الأجهزة</a></li>
-                    <li><a data-toggle="tab" href="#menu3">العقار </a></li>
-                    <li><a data-toggle="tab" href="#menu4">أخرى</a></li>
+                    <li class="<?php echo $current_page == ''?'active':''?>"><a data-toggle="tab" href="#home">كل الإعلانات</a></li>
+                    <li class="<?php echo $current_page == 'حراج-السيارات'?'active':''?>"><a data-toggle="tab" href="#menu1">حراج السيارات</a></li>
+                    <li class="<?php echo $current_page == 'أجهزة'?'active':''?>"><a data-toggle="tab" href="#menu2">حراج الأجهزة</a></li>
+                    <li class="<?php echo $current_page == 'عقارات'?'active':''?>"><a data-toggle="tab" href="#menu3">العقار </a></li>
+                    <li class="<?php echo $current_page == 'more'?'active':''?>"><a data-toggle="tab" href="#menu4">أخرى</a></li>
                 </ul>
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
