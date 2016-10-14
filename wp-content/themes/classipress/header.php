@@ -9,31 +9,16 @@
 global $cp_options;
 ?>
 <div class="header">
-<!--    <div class="header_top">
-        <div class="header_top_res">
-            <p>
-                <?php echo cp_login_head(); ?>
-                <a href="<?php echo appthemes_get_feed_url(); ?>" class="srvicon rss-icon" target="_blank" title="<?php _e('RSS Feed', APP_TD); ?>"><?php _e('RSS Feed', APP_TD); ?></a>
-                <?php if ($cp_options->facebook_id) { ?>
-                    &nbsp;|&nbsp;<a href="<?php echo appthemes_make_fb_profile_url($cp_options->facebook_id); ?>" class="srvicon facebook-icon" target="_blank" title="<?php _e('Facebook', APP_TD); ?>"><?php _e('Facebook', APP_TD); ?></a>
-                <?php } ?>
-
-                <?php if ($cp_options->twitter_username) { ?>
-                    &nbsp;|&nbsp;<a href="http://twitter.com/<?php echo $cp_options->twitter_username; ?>" class="srvicon twitter-icon" target="_blank" title="<?php _e('Twitter', APP_TD); ?>"><?php _e('Twitter', APP_TD); ?></a>
-                <?php } ?>
-            </p>
-        </div> 
-    </div> -->
     <div class="header_main">
         <div class="headmenu hidden-xs">
-            <a href="/"> الرئيسية</a>
-            <a href="/"> حراج السيارات</a>
-            <a href="/"> أجهزة</a>
-            <a href="/"> عقارات</a>
-            <a href="/"> مواشي و حيوانات و طيور</a>
-            <a href="/"> خدمات</a>
-            <a href="/"> المزيد</a>
-            <a href="/"> البحث</a>
+            <a href="<?php echo site_url(); ?>"> الرئيسية</a>
+            <a href="<?php echo site_url(); ?>/ad-category/حراج-السيارات"> حراج السيارات</a>
+            <a href="<?php echo site_url(); ?>/ad-category/أجهزة"> أجهزة</a>
+            <a href="<?php echo site_url(); ?>/ad-category/عقارات"> عقارات</a>
+            <a href="<?php echo site_url(); ?>/ad-category/مواشي-و-حيوانات-و-طيور"> مواشي و حيوانات و طيور</a>
+            <a href="<?php echo site_url(); ?>/ad-category/services"> خدمات</a>
+            <a href="<?php echo site_url(); ?>/ad-category/more"> المزيد</a>
+            <a href="<?php echo site_url(); ?>/ad-category/search"> البحث</a>
         </div>
         <?php //wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'menu-header', 'fallback_cb' => false, 'container' => false)); ?>
 
@@ -50,29 +35,29 @@ global $cp_options;
                 <span class="icon-bar"></span>
             </button>
             <p class="navbar-text navbar-right visible-xs ">
-                <a href="<?php echo get_site_url(); ?>/login" class="pull-left visible-xs ">دخول  </a>
-                <a href="/advsearch.php" class="pull-left visible-xs "><i class="fa fa-search"></i></a>
+                <a href="<?php echo site_url(); ?>/login" class="pull-left visible-xs ">دخول  </a>
+                <a href="<?php echo site_url(); ?>/advsearch" class="pull-left visible-xs "><i class="fa fa-search"></i></a>
             </p>
             <div class="collapse navbar-collapse navbar-ex1-collapse col-md-9">
                 <ul class="nav navbar-nav menu">
-                    <li><a href="<?php echo get_site_url(); ?>/login">تسجيل الدخول  </a></li>
-                    <li><a href="<?php echo get_site_url(); ?>/register"> التسجيل بالموقع</a></li>
-                    <li class=" "><a href="commission.php">حساب عمولة الموقع</a></li>
+                    <li><a href="<?php echo site_url(); ?>/login">تسجيل الدخول  </a></li>
+                    <li><a href="<?php echo site_url(); ?>/register"> التسجيل بالموقع</a></li>
+                    <li class=" "><a href="<?php echo site_url(); ?>/commission">حساب عمولة الموقع</a></li>
                     <li class="divider visible-xs"></li>
-                    <li class="visible-xs"><a href="#"> حراج السيارات</a></li>
-                    <li class="visible-xs"><a href="#"> أجهزة</a></li>
-                    <li class="visible-xs"><a href="#"> عقارات</a></li>
-                    <li class="visible-xs"> <a href=""> مواشي و حيوانات و طيور</a></li>
-                    <li class="visible-xs"> <a href=""> خدمات</a></li>
-                    <li class="visible-xs"> <a href="/sitemap.php"> المزيد</a></li>
-                    <li class="visible-xs"><a href="/advsearch.php"> البحث</a></li>
-                    <li class="visible-xs"><a href="/contact.php">اتصل بنا</a></li>
+                    <li class="visible-xs"><a href="<?php echo site_url(); ?>"> حراج السيارات</a></li>
+                    <li class="visible-xs"><a href="<?php echo site_url(); ?>"> أجهزة</a></li>
+                    <li class="visible-xs"><a href="<?php echo site_url(); ?>"> عقارات</a></li>
+                    <li class="visible-xs"> <a href="<?php echo site_url(); ?>"> مواشي و حيوانات و طيور</a></li>
+                    <li class="visible-xs"> <a href="<?php echo site_url(); ?>"> خدمات</a></li>
+                    <li class="visible-xs"> <a href="<?php echo site_url(); ?>/sitemap"> المزيد</a></li>
+                    <li class="visible-xs"><a href="<?php echo site_url(); ?>/advsearch.php"> البحث</a></li>
+                    <li class="visible-xs"><a href="<?php echo site_url(); ?>/contact">اتصل بنا</a></li>
                     <li class="dropdown hidden-xs">
                         <a data-toggle="dropdown" class="dropdown" href="#"> <i class="fa fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/advsearch.php"> البحث المتقدم</a></li>
-                            <li><a href="/commission.php">حساب عمولة الموقع</a></li>
-                            <li><a href="/contact.php">اتصل بنا</a></li>
+                            <li><a href="<?php echo site_url(); ?>/advsearch"> البحث المتقدم</a></li>
+                            <li><a href="<?php echo site_url(); ?>/commission">حساب عمولة الموقع</a></li>
+                            <li><a href="<?php echo site_url(); ?>/contact">اتصل بنا</a></li>
                             <li class="divider"></li>
                         </ul>
                     </li>
