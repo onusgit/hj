@@ -610,4 +610,10 @@ img {
 .icon-Fujifilm:before {
 	content: "\e01c";
 }
-
+.content_reg .shadowblock{
+    background-color: #fff;
+}
+.register-box{
+    margin: 0px auto;
+    width: 40%;
+}
