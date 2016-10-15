@@ -95,13 +95,13 @@ global $cp_options;
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 font-16"><hr>
                     <div class="padding-bottom-5">
-                        <a href="/contact.php">اتصل بنا</a>
+                        <a href="<?php echo get_site_url(); ?>/contact">اتصل بنا</a>
                     </div>
                     <div class="padding-bottom-5">
-                        <a href="/discount.php">نظام الخصم</a>
+                        <a href="<?php echo get_site_url(); ?>/discount">نظام الخصم</a>
                     </div>
                     <div class="padding-bottom-5">
-                        <a href="/checkacc.php">القائمة السوداء</a>
+                        <a href="<?php echo get_site_url(); ?>/check-account">القائمة السوداء</a>
                     </div>
                     <div class="padding-bottom-5">
                         <a href="/notallowed.php">قائمة السلع والإعلانات الممنوعة</a>

@@ -41,7 +41,7 @@
 
 							<div class="pad10"></div>
 
-							<div class="license"><?php cp_display_message( 'terms_of_use' ); ?></div>
+							<div class="license"><?php //cp_display_message( 'terms_of_use' ); ?></div>
 
 							<div class="clr"></div>
 
