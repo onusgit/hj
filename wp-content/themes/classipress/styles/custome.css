@@ -437,3 +437,177 @@ img {
     vertical-align: middle;
 }
 /* end main content */
+.glyph {
+    font-size: 16px;
+    float: right;
+    text-align: center;
+    background: #F8F7F7;
+    padding: .50em;
+    margin: .50em 1em .50em 0;
+    width: 5em;
+    border-radius: .25em;
+    box-shadow: inset 0 0 0 1px #F8F7F7, 0 0 0 1px #CCC;
+}
+
+/*glyph icon*/
+@font-face {
+	font-family: 'icomoon';
+	src:url('https://s3-eu-west-1.amazonaws.com/img1.haraj.com.sa/static/font5/harajicons.eot');
+	src:url('https://s3-eu-west-1.amazonaws.com/img1.haraj.com.sa/static/font5/harajicons.eot?#iefix') format('embedded-opentype'),
+		url('https://s3-eu-west-1.amazonaws.com/img1.haraj.com.sa/static/font5/harajicons.woff') format('woff'),
+		url('https://s3-eu-west-1.amazonaws.com/img1.haraj.com.sa/static/font5/harajicons.ttf') format('truetype'),
+		url('https://s3-eu-west-1.amazonaws.com/img1.haraj.com.sa/static/font5/harajicons.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-parrot:before {
+	content: "\e600";
+}
+
+.icon-athath:before {
+	content: "\e601";
+}
+
+.icon-goat:before {
+	content: "\e602";
+}
+
+.icon-Panasonic:before {
+	content: "\e000";
+}
+
+.icon-Microsoft:before {
+	content: "\e001";
+}
+
+.icon-Acer:before {
+	content: "\e002";
+}
+
+.icon-apple:before {
+	content: "\e003";
+}
+
+.icon-Nikon:before {
+	content: "\e013";
+}
+
+.icon-Toshiba:before {
+	content: "\e014";
+}
+
+.icon-Sony:before {
+	content: "\e015";
+}
+
+.icon-Samsung:before {
+	content: "\e016";
+}
+
+.icon-Olympus:before {
+	content: "\e017";
+}
+
+.icon-Nokia:before {
+	content: "\e018";
+}
+
+.icon-LG:before {
+	content: "\e019";
+}
+
+.icon-HTC:before {
+	content: "\e01a";
+}
+
+.icon-Hitachi:before {
+	content: "\e01b";
+}
+
+.icon-Canon:before {
+	content: "\e01d";
+}
+
+.icon-Asus:before {
+	content: "\e01e";
+}
+
+.icon-BlackBerry:before {
+	content: "\e01f";
+}
+
+.icon-cat:before {
+	content: "\e004";
+}
+
+.icon-sheep2:before {
+	content: "\e005";
+}
+
+.icon-sheep:before {
+	content: "\e006";
+}
+
+.icon-msgread2:before {
+	content: "\e007";
+}
+
+.icon-car2:before {
+	content: "\e010";
+}
+
+.icon-camel:before {
+	content: "\e011";
+}
+
+.icon-msgunread2:before {
+	content: "\e008";
+}
+
+.icon-car:before {
+	content: "\e009";
+}
+
+.icon-bell2:before {
+	content: "\e00a";
+}
+
+.icon-msgunread:before {
+	content: "\e00b";
+}
+
+.icon-msgread:before {
+	content: "\e00c";
+}
+
+.icon-chicken:before {
+	content: "\e00d";
+}
+
+.icon-location:before {
+	content: "\e00e";
+}
+
+.icon-bell:before {
+	content: "\e00f";
+}
+
+.icon-Fujifilm:before {
+	content: "\e01c";
+}
+
