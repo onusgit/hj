@@ -55,12 +55,12 @@ $show_password_fields = apply_filters('show_password_fields_on_registration', tr
 
                                 <div class="col-md-12">
                                     <label for="pass1"><?php _e('Password:', APP_TD); ?></label>
-                                    <input tabindex="3" type="password" class="text required col-md-12" name="pass1" id="pass1" value="" autocomplete="off" />
+                                    <input tabindex="3" type="password" class="text required col-md-12" name="pass1" id="pass3" value="" autocomplete="off" />
                                 </div>
 
                                 <div class="col-md-12">
                                     <label for="pass2"><?php _e('Password Again:', APP_TD); ?></label>
-                                    <input tabindex="4" type="password" class="text required col-md-12" name="pass2" id="pass2" value="" autocomplete="off" />
+                                    <input tabindex="4" type="password" class="text required col-md-12" name="pass2" id="pass4" value="" autocomplete="off" />
                                 </div>
 
                                 <!--									<div class="strength-meter">

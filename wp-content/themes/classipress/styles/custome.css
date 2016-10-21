@@ -644,3 +644,6 @@ img {
 .red{
     color: red;
 }
+#pass1-text{
+    display: none;
+}

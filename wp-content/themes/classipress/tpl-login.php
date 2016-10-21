@@ -52,7 +52,8 @@
                                 <p class="lostpass padding-bottom-10per padding-top-4per">
                                     <a class="lostpass" href="<?php echo appthemes_get_password_recovery_url(); ?>" title="<?php _e('Password Lost and Found', APP_TD); ?>"><?php _e('Lost your password?', APP_TD); ?></a>
                                 </p>
-                                <a href="<?php echo get_site_url(); ?>/register"><input type="submit" class="btn btn-primary col-md-12" value="<?php _e('Register &raquo;', APP_TD); ?>" /></a>
+                                <a href="<?php echo get_site_url(); ?>/register">
+                                    <?php _e('Register &raquo;', APP_TD); ?></a>
                                 <?php // wp_register('<p class="register">', '</p>'); ?>
 
                                 <?php do_action('login_form'); ?>
