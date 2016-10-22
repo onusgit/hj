@@ -118,8 +118,8 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                             </button> 
                             <button href="#" id="grid" class="btn btn-primary active">
                                 <i class="fa fa-globe"></i>
-                            </button>
-                            <a href="<?php echo get_site_url(); ?>/login" class="btn btn-success btn-lg pull-right btn_add"> <i class="fa fa-plus "></i><font><font class=""> Post your ad with us</font></font></a>
+                            </button>                         
+                            <a href="<?php echo CP_ADD_NEW_URL; ?>" class="btn btn-success btn-lg pull-right btn_add"> <i class="fa fa-plus "></i><?php _e('Post your ad with us', APP_TD); ?></a>
                         </div>
                     </div>
                     <div id="products" class="row margin-0 list-group padding-top-4per">

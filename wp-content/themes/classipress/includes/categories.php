@@ -117,7 +117,8 @@ if ( ! function_exists( 'cp_dropdown_categories_prices' ) ) {
 			$tab_index_attribute = " tabindex=\"$tab_index\"";
 		}
 
-		$categories = get_categories( $r );
+//		$categories = get_categories( $r );
+		$categories = get_categories(array('taxonomy' => 'ad_cat'));
 		$name = esc_attr( $name );
 		$class = esc_attr( $class );
 		$id = $id ? esc_attr( $id ) : $name;

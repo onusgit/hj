@@ -49,7 +49,8 @@ hr {
     text-decoration: underline;
 }
 #logo{
-    padding-bottom: 15px;
+    /*padding-bottom: 15px;*/
+    margin-top: -2px;
 }
 .header_menu {
     border-radius: 5px;

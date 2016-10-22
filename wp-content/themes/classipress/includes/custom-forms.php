@@ -435,7 +435,7 @@ function cp_show_review( $postvals ) {
 	<div class="clr"></div>
 
 
-	<li>
+<!--	<li>
 		<div class="labelwrapper">
 			<label><?php _e( 'Ad Listing Fee:', APP_TD ); ?></label>
 		</div>
@@ -482,7 +482,7 @@ function cp_show_review( $postvals ) {
 		if ( cp_payments_is_enabled() ) {
 			do_action( 'appthemes_purchase_fields' );
 		}
-	?>
+	?>-->
 
 <?php
 }
