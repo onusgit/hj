@@ -52,9 +52,9 @@
                             </p>-->
 
                             <p class="btn2">
-                                <input type="button" name="goback" class="btn_orange" value="<?php _e('Go back', APP_TD); ?>" onClick="location.href = '<?php echo appthemes_get_step_url(appthemes_get_previous_step()); ?>';
+                                <input type="button" name="goback" class="btn btn-primary" value="<?php _e('Go back', APP_TD); ?>" onClick="location.href = '<?php echo appthemes_get_step_url(appthemes_get_previous_step()); ?>';
                                                                         return false;" />
-                                <input type="submit" name="step2" id="step2" class="btn_orange" value="<?php _e('Continue &rsaquo;&rsaquo;', APP_TD); ?>" />
+                                <input type="submit" name="step2" id="step2" class="btn btn-success" value="<?php _e('Continue &rsaquo;&rsaquo;', APP_TD); ?>" />
                             </p>
 
                             <input type="hidden" name="action" value="<?php echo esc_attr($action); ?>" />

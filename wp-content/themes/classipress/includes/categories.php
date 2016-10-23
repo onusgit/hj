@@ -99,7 +99,7 @@ if ( ! function_exists( 'cp_dropdown_categories_prices' ) ) {
 			'echo' => 1,
 			'selected' => 0,
 			'hierarchical' => 1,
-			'name' => 'cat',
+//			'name' => 'cat',
 			'id' => 'ad_cat_id',
 			'class' => 'dropdownlist',
 			'depth' => 1,
@@ -116,9 +116,12 @@ if ( ! function_exists( 'cp_dropdown_categories_prices' ) ) {
 		if ( (int) $tab_index > 0 ) {
 			$tab_index_attribute = " tabindex=\"$tab_index\"";
 		}
-
-//		$categories = get_categories( $r );
-		$categories = get_categories(array('taxonomy' => 'ad_cat'));
+//                echo "<pre>";
+//                print_r($r);
+		$categories = get_categories( $r );
+//                echo "<pre>";
+//                print_r($categories);
+//		$categories = get_categories(array('taxonomy' => 'ad_cat'));
 		$name = esc_attr( $name );
 		$class = esc_attr( $class );
 		$id = $id ? esc_attr( $id ) : $name;
