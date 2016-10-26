@@ -1,13 +1,13 @@
 /*
-Theme Name: ClassiPress (shared on themelot.net)
-Theme URI: http://www.appthemes.com/themes/classipress/
-Description: A highly customizable classified ads application theme brought to you by AppThemes.
-Version: 3.4
-Author: AppThemes
-Author URI: http://themelot.net/
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-AppThemes ID: classipress
+Theme Name: Kharaj Store
+Theme URI: onusinfotech.com
+Description: A highly customizable classified ads themes.
+Version: 2016
+Author: Jaysukh - Onus infotech
+Author URI: onusinfotech.com
+License: GNU General Public License v1 or later
+License URI: onusinfotech.com
+AppThemes ID: kharajstore
 */
 
 
@@ -1042,7 +1042,19 @@ p.alt-text {padding-top:10px;}
 .footer_main_res div.column ul li:after {
     clear: both;
 }
-
+.page-id-75 .content_right{
+    display: none;
+}
+.page-id-75 .post ul li, .single-main ul li {   
+    list-style: none;
+    padding-right: 10px;
+}
+.page-id-75 .content_left {   
+    width: 100%;
+}
+.suggest_post img{
+    width: 80%;
+}
 /* responsive styles */
 
 @media screen and (max-width: 940px) {

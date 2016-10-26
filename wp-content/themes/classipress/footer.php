@@ -81,43 +81,43 @@ global $cp_options;
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 pull-right font-16">
                     <hr>
                     <div class="padding-bottom-5per">
-                        <a href="/commission.php">حساب عمولة الموقع</a>
+                        <a href="/commission">حساب عمولة الموقع</a>
                     </div>
                     <div class="padding-bottom-5per">
-                        <a href="/member.php"> عضوية معارض السيارات و مكاتب العقار</a>
+                        <a href="/member"> عضوية معارض السيارات و مكاتب العقار</a>
                     </div>
                     <div class="padding-bottom-5per">
-                        <a href="/f.php"> <i class="star fa fa-star "> </i> الإعلانات المميزة</a>
+                        <a href="/f"> <i class="star fa fa-star "> </i> الإعلانات المميزة</a>
                     </div>
                     <div class="padding-bottom-5per">
-                        <a href="/n.php"> رسوم الخدمات المكررة</a>
+                        <a href="/n"> رسوم الخدمات المكررة</a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 font-16"><hr>
                     <div class="padding-bottom-5">
                         <a href="<?php echo get_site_url(); ?>/contact">اتصل بنا</a>
                     </div>
-                    <div class="padding-bottom-5">
-                        <a href="<?php echo get_site_url(); ?>/discount">نظام الخصم</a>
-                    </div>
-                    <div class="padding-bottom-5">
+<!--                    <div class="padding-bottom-5">
+                        <a href="#">نظام الخصم</a>
+                    </div>-->
+<!--                    <div class="padding-bottom-5">
                         <a href="<?php echo get_site_url(); ?>/check-account">القائمة السوداء</a>
+                    </div>-->
+                    <div class="padding-bottom-5">
+                        <a href="/notallowed">قائمة السلع والإعلانات الممنوعة</a>
                     </div>
                     <div class="padding-bottom-5">
-                        <a href="/notallowed.php">قائمة السلع والإعلانات الممنوعة</a>
+                        <a href="/rules">معاهدة إستخدام الموقع</a>
                     </div>
                     <div class="padding-bottom-5">
-                        <a href="/rules.php">معاهدة إستخدام الموقع</a>
+                        <a href="/rating">نظام التقييم</a>
                     </div>
-                    <div class="padding-bottom-5">
-                        <a href="/rating.php">نظام التقييم</a>
-                    </div>
-                    <div class="padding-bottom-5">
+<!--                    <div class="padding-bottom-5">
                         <a href="http://montada.haraj.com.sa">الانتقال لمنتدى السيارات</a>
-                    </div>
-                    <div class="padding-bottom-5">
+                    </div>-->
+<!--                    <div class="padding-bottom-5">
                         <a href="/haraj-app.php"><i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"> </i> تطبيق حراج</a>
-                    </div>
+                    </div>-->
                 </div>
             </div>  
         </div>

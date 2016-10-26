@@ -17,8 +17,8 @@ global $cp_options;
             <a href="<?php echo site_url(); ?>/ad-category/عقارات"> عقارات</a>
             <a href="<?php echo site_url(); ?>/ad-category/مواشي-و-حيوانات-و-طيور"> مواشي و حيوانات و طيور</a>
             <a href="<?php echo site_url(); ?>/ad-category/services"> خدمات</a>
-            <a href="<?php echo site_url(); ?>/ad-category/more"> المزيد</a>
-            <a href="<?php echo site_url(); ?>/ad-category/search"> البحث</a>
+            <a href="<?php echo site_url(); ?>/sitmap/"> المزيد</a>
+            <a href="<?php echo site_url(); ?>/search"> البحث</a>
         </div>
         <?php //wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'menu-header', 'fallback_cb' => false, 'container' => false)); ?>
 
