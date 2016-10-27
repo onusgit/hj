@@ -654,7 +654,7 @@ img {
     background-color: #419641;
     border-color: #3e8f3e;
 }
-.page-id-80 .content_res{
+.page-id-80 .content_res, .page-id-84 .content_res{
     width: 100%;
 }
 .wpcf7-form{
@@ -711,4 +711,17 @@ img {
 }
 .wpcf7-form .ajax-loader{
     display: none;
+}
+.page-id-84 .shadowblock_out{
+    border: none;
+}
+.page-id-84 .content{
+    border: none;
+}
+.breadcrumb-trail.breadcrumbs, .page-id-84 .single.dotted{
+    display: none
+}
+.page-id-84 .post{
+    background-color: #fff;
+    padding-right: 25px;
 }
