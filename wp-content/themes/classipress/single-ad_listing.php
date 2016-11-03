@@ -15,7 +15,7 @@
 
         <div class="content_ads">
 
-            <!--<div id="breadcrumb"><?php // cp_breadcrumb();            ?></div>-->
+            <!--<div id="breadcrumb"><?php // cp_breadcrumb();             ?></div>-->
 
             <div class="clr"></div>
 
@@ -39,7 +39,7 @@
 
                                 <?php // appthemes_before_post_title(); ?>
 
-                                                                                                                        <!--<h1 class="single-listing"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php // the_title();            ?></a></h1>-->
+                                                                                                                                <!--<h1 class="single-listing"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php // the_title();             ?></a></h1>-->
 
                                 <div class="clr"></div>
 
@@ -52,20 +52,20 @@
                                         <!--&nbsp; <a href="https://haraj.com.sa/users/qwqw0000" class="username"><font><font>qwqw0000</font></font></a>-->
                                         <font><font>  <?php echo appthemes_display_date($post->post_date); ?> </font></font>
                                         <!--<a href="https://haraj.com.sa/city/الرياض" class="city-head"><font><font>Riyadh</font></font></a>-->
-                                        
+
                                         <br><font><font> 
-                                            
+
                                         </font></font><div class="pull-left">
 
-<!--
-
-                                            <a href="https://haraj.com.sa/nextad.php?ads_id=16542717&amp;url=http://haraj.com/&amp;nextads=%D9%81%D9%8A%D9%84%D8%A7_%D9%84%D9%84%D8%A8%D9%8A%D8%B9_%D9%81%D9%8A_%D8%AD%D9%8A_%D8%A7%D9%84%D9%86%D8%B3%D9%8A%D9%85_%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%D9%8A_%D9%81%D9%8A_%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6" class="nextad"><font><font> Next ←  </font></font></a>
-                                            <br>-->
+                                            <!--
+                                            
+                                                                                        <a href="https://haraj.com.sa/nextad.php?ads_id=16542717&amp;url=http://haraj.com/&amp;nextads=%D9%81%D9%8A%D9%84%D8%A7_%D9%84%D9%84%D8%A8%D9%8A%D8%B9_%D9%81%D9%8A_%D8%AD%D9%8A_%D8%A7%D9%84%D9%86%D8%B3%D9%8A%D9%85_%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%D9%8A_%D9%81%D9%8A_%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6" class="nextad"><font><font> Next ←  </font></font></a>
+                                                                                        <br>-->
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="bigright padding-top-20 <?php // cp_display_style('ad_single_images');            ?>">
+                                <div class="bigright padding-top-20 <?php // cp_display_style('ad_single_images');             ?>">
 
                                     <ul>
 
@@ -99,7 +99,28 @@
 
                                         <div id="main-pic">
 
-                                            <?php cp_get_image_url(); ?>
+                                            <?php
+                                            $images = get_children(array('post_parent' => $post->ID, 'post_status' => 'inherit', 'numberposts' => 1, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'ID'));
+                                            if ($images) {
+                                                // move over bacon
+                                                $image = array_shift($images);
+                                                $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);                                              
+                                                // grab the large image for onhover preview
+                                                $adlargearray = wp_get_attachment_image_src($image->ID, 'large');                                                
+                                                $img_large_url_raw = $adlargearray[0];
+
+                                                // must be a v3.0.5+ created ad
+                                                if ($adlargearray) {
+                                                    echo '<a href="' . $img_large_url_raw . '" class="img-main" data-rel="colorbox" title="' . the_title_attribute('echo=0') . '"><img src="' . $img_large_url_raw . '" title="' . $alt . '" alt="' . $alt . '" /></a>';
+                                                }
+
+                                                // no image so return the placeholder thumbnail
+                                            } else {
+                                                echo '<img class="attachment-medium" alt="" title="" src="' . appthemes_locate_template_uri('images/no-thumb.jpg') . '" />';
+                                            }
+
+//                                            cp_get_image_url();
+                                            ?>
 
                                             <div class="clr"></div>
 
@@ -128,7 +149,7 @@
                                     cp_get_ad_details($post->ID, $cat_id, 'content');
                                     ?>
 
-                                                                                                            <!--<h3 class="description-area"><?php _e('Description', APP_TD); ?></h3>-->
+                                                                                                                    <!--<h3 class="description-area"><?php _e('Description', APP_TD); ?></h3>-->
 
 
                                     <div class="contact padding-top-20">
