@@ -92,7 +92,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                     </div>
                     <div id="menu4" class="tab-pane fade">
                         <h3>التسجيل بالموقع</h3>
-                        <<div class="main-col">
+                        <div class="main-col">
                             <div class="row img_carousel">
                                 <ul>
                                     <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
@@ -144,8 +144,9 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                             'ignore_sticky_posts' => 1,
                             'order' => $_GET['order'],
                             'meta_key' => $_GET['meta_key'],
-                            'ad_tag' => $_GET['tag'],
+                            'ad_tag' => $_GET['ad_tags'],
                             'ad_cat' => $_GET['category'],
+							'p' => $_GET['adsnumber'],
 //    'tax_query' => array(
 //        array(
 //            'taxonomy' => 'ad_cat',
@@ -222,7 +223,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             </form>
             <br>
             <hr>
-            <form action="/search.php" method="get" class="visible-xs">
+            <form action="" method="get" class="visible-xs">
                 <div class="row">
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                         <input type="search" class="form-control margin-top-10" placeholder="ابحث عن سلعه ..." name="key">
@@ -241,206 +242,216 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             </form>
             <hr>
             <div class="bs-example bs-example-tabs">
+			<form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="get">
                 <ul class="nav nav-tabs" id="myTab">
                     <li class="active"><a data-toggle="tab" href="#home">سيارات</a></li>
                     <li class=""><a data-toggle="tab" href="#profile">سيارات بالصور</a></li>
                 </ul>
+
+				 <input type="hidden" name="ad_tags" class="tag_input"><br>
+									
                 <div class="tab-content" id="myTabContent">
                     <div id="home" class="tab-pane fade active in">
                         <!-- start img cats-->
-                        <a class="gallerypic" href="/tags/تويوتا">
+                        <a data_value = "تويوتا" class="gallerypic tag" href="/tags/تويوتا">
                             <img class="car_cont sprite-toyota" title="سيارات تويوتا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات تويوتا">
                         </a>
-                        <a class="gallerypic" href="/tags/نيسان">
+                        <a data_value = "فورد" class="gallerypic tag" href="/tags/نيسان">
                             <img class="car_cont sprite-nissan" title="نسيان" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="نسيان"></a>
-                        <a class="gallerypic" href="/tags/فورد">
+                        <a data_value = "فورد" class="gallerypic tag" href="/tags/فورد">
                             <img class="car_cont sprite-ford" title="سيارات فورد" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات فورد"></a>
-                        <a class="gallerypic" href="/tags/لكزس">
+                        <a data_value = "لكزس" class="gallerypic tag" href="/tags/لكزس">
                             <img class="car_cont sprite-lexus" title="لكزس" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="لكزس"></a>
-                        <a class="gallerypic" href="/tags/شيفروليه">
+                        <a data_value = "شيفروليه" class="gallerypic tag" href="/tags/شيفروليه">
                             <img class="car_cont sprite-chevrolet" title="سيارات شفروليه للبيع" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات شفروليه للبيع"></a> 
-                        <a class="gallerypic" href="/tags/مرسيدس">
+                        <a data_value = "مرسيدس" class="gallerypic tag" href="/tags/مرسيدس">
                             <img class="car_cont sprite-benz" title="سيارات مرسيدس" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات مرسيدس"></a>  
-                        <a class="gallerypic" href="/tags/جي%20ام%20سي">
+                        <a data_value = "جي%20ام%20سي" class="gallerypic tag" href="/tags/جي%20ام%20سي">
                             <img class="car_cont sprite-GMC" title="جي ام سي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="جي ام سي"></a>
-                        <a class="gallerypic" href="/tags/بي%20ام%20دبليو">
+                        <a data_value = "بي%20ام%20دبليو" class="gallerypic tag" href="/tags/بي%20ام%20دبليو">
                             <img class="car_cont sprite-bmw" title="بي ام دبليو" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="بي ام دبليو"></a>
-                        <a class="gallerypic" href="/tags/دودج">
+                        <a data_value = "دودج" class="gallerypic tag" href="/tags/دودج">
                             <img class="car_cont sprite-dodge" title="سيارات دودج" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات دوج"></a>
-                        <a class="gallerypic" href="/tags/همر">
+                        <a data_value = "همر" class="gallerypic tag" href="/tags/همر">
                             <img class="car_cont sprite-mini" title="سيارات همر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات همر"></a>
-                        <a class="gallerypic" href="/tags/كاديلاك">
+                        <a data_value = "كاديلاك" class="gallerypic tag" href="/tags/كاديلاك">
                             <img class="car_cont sprite-cadillac" title="سيارات كاديلاك" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات كاديلاك"></a>
-                        <a class="gallerypic" href="/tags/اودي">
+                        <a data_value = "اودي" class="gallerypic tag" href="/tags/اودي">
                             <img class="car_cont sprite-audi" title="اودي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="اودي"></a>  
-                        <a class="gallerypic" href="/tags/هوندا">
+                        <a data_value = "هوندا" class="gallerypic tag" href="/tags/هوندا">
                             <img class="car_cont sprite-honda" title="هوندا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="هوندا"></a>
-                        <a class="gallerypic" href="/tags/لاند روفر">
+                        <a data_value = "اند روفر" class="gallerypic tag" href="/tags/لاند روفر">
                             <img class="car_cont sprite-landrover" title="لاندروفر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="لاندروفر"></a> 
-                        <a class="gallerypic" href="/tags/فولكس واجن">
+                        <a data_value = "فولكس واجن" class="gallerypic tag" href="/tags/فولكس واجن">
                             <img class="car_cont sprite-volkswagen" title="فولكس واجن" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="فولكس واجن"></a>
-                        <a class="gallerypic" href="/tags/مازدا">
+                        <a data_value = "مازدا"" class="gallerypic tag" href="/tags/مازدا">
                             <img class="car_cont sprite-mazda" title="مازدا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="مازدا"></a>
-                        <a class="gallerypic" href="/tags/ميتسوبيشي">
+                        <a data_value = "ميتسوبيشي"" class="gallerypic tag" href="/tags/ميتسوبيشي">
                             <img class="car_cont sprite-mitsubishi" title="ميتسوبيشي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="ميتسوبيشي"></a>
-                        <a class="gallerypic" href="/tags/هونداي">
+                        <a data_value = "هونداي"" class="gallerypic tag" href="/tags/هونداي">
                             <img class="car_cont sprite-hyundai" title="هونداي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="هونداي"></a>
-                        <a class="gallerypic" href="/tags/جيب">
+                        <a data_value = "جيب"" class="gallerypic tag" href="/tags/جيب">
                             <img class="car_cont sprite-jeep" title="جيب" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="جيب"></a>
-                        <a class="gallerypic" href="/tags/انفنيتي">
+                        <a data_value = "انفنيتي"" class="gallerypic tag" href="/tags/انفنيتي">
                             <img class="car_cont sprite-infiniti" title="انفنيتي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="انفنيتي"></a>
-                        <a class="gallerypic" href="/tags/سوزوكي">
+                        <a data_value = "سوزوكي"" class="gallerypic tag" href="/tags/سوزوكي">
                             <img class="car_cont sprite-suzuki" title="سوزوكي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سوزوكي"></a>
-                        <a class="gallerypic" href="/tags/كيا">
+                        <a data_value = "كيا"" class="gallerypic tag" href="/tags/كيا">
                             <img class="car_cont sprite-kia" title="كيا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="كيا"></a>
-                        <a class="gallerypic" href="/tags/كرايزلر">
+                        <a data_value = "كرايزلر"" class="gallerypic tag" href="/tags/كرايزلر">
                             <img class="car_cont sprite-chrysler" title="كرايزلر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="كرايزلر"></a>
-                        <a class="gallerypic" href="/tags/بورش">
+                        <a data_value = "بورش"" class="gallerypic tag" href="/tags/بورش">
                             <img class="car_cont sprite-porsche" title="بورش" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="بورش"></a>
-                        <a class="gallerypic" href="/tags/قطع غيار وملحقات">
+                        <a data_value = "قطع غيار وملحقات"" class="gallerypic tag" href="/tags/قطع غيار وملحقات">
                             <img class="car_cont sprite-parts" title="قطع غيار وملحقات" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="قطع غيار وملحقات"></a>
-                        <a class="gallerypic" href="/tags/شاحنات ومعدات ثقيلة">
+                        <a data_value = "شاحنات ومعدات ثقيلة"" class="gallerypic tag" href="/tags/شاحنات ومعدات ثقيلة">
                             <img class="car_cont sprite-trucks" title="شاحنات ومعدات ثقيلة" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="شاحنات ومعدات ثقيلة"></a>
 
-                        <a class="gallerypic" href="/tags/دبابات">
+                        
+						<a data_value="دبابات" class="gallerypic tag" class="gallerypic tag" href="/tags/دبابات">
                             <img class="car_cont sprite-bikes" title="دبابات" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="دبابات"></a>
 
-                        <a class="gallerypic" href="/tags/سيارات تراثية">
+                       <a data_value="سيارات تراثية" class="gallerypic tag" href="/tags/سيارات تراثية">
                             <img class="car_cont sprite-classic" title="سيارات تراثية" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات تراثية"></a>
 
-                        <a class="gallerypic" href="/tags/سيارات مصدومه">
+                       <a data_value="سيارات مصدومه" class="gallerypic tag" href="/tags/سيارات مصدومه">
                             <img class="car_cont sprite-damaged" title="سيارات مصدومه" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات مصدومه"></a>
 
-                        <a class="gallerypic" href="/tags/سيارات للتنازل">
+                       <a data_value="سيارات للتنازل" class="gallerypic tag" href="/tags/سيارات للتنازل">
                             <img class="car_cont sprite-tanazul" title="سيارات للتنازل" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات للتنازل"></a>
                         <!-- end-->
                     </div>
                     <div id="profile" class="tab-pane fade ">
-                        <a class="gallerypic" href="/pic/تويوتا">
+                       <a data_value="تويوتا" class="gallerypic tag" href="/pic/تويوتا">
                             <img class="car_cont sprite-toyota" title="سيارات تويوتا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات تويوتا">
                             <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/نيسان">
+                       <a data_value="نيسان" class="gallerypic tag" href="/pic/نيسان">
                             <img class="car_cont sprite-nissan" title="نسيان" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="نسيان">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/فورد">
+                       <a data_value="فورد" class="gallerypic tag" href="/pic/فورد">
                             <img class="car_cont sprite-ford" title="سيارات فورد" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات فورد">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/لكزس">
+                       <a data_value="لكزس" class="gallerypic tag" href="/pic/لكزس">
                             <img class="car_cont sprite-lexus" title="لكزس" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="لكزس">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/شيفروليه">
+                       <a data_value="شيفروليه" class="gallerypic tag" href="/pic/شيفروليه">
                             <img class="car_cont sprite-chevrolet" title="سيارات شفروليه للبيع" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات شفروليه للبيع">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>  
-                        <a class="gallerypic" href="/pic/مرسيدس">
+                       <a data_value="مرسيدس" class="gallerypic tag" href="/pic/مرسيدس">
                             <img class="car_cont sprite-benz" title="سيارات مرسيدس" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات مرسيدس">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a> 
-                        <a class="gallerypic" href="/pic/جي%20ام%20سي">
+                       <a data_value="جي%20ام%20سي" class="gallerypic tag" href="/pic/جي%20ام%20سي">
                             <img class="car_cont sprite-GMC" title="جي ام سي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="جي ام سي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/بي%20ام%20دبليو">
+                       <a data_value="بي%20ام%20دبليو" class="gallerypic tag" href="/pic/بي%20ام%20دبليو">
                             <img class="car_cont sprite-bmw" title="بي ام دبليو" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="بي ام دبليو">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/دودج">
+                       <a data_value="دودج" class="gallerypic tag" href="/pic/دودج">
                             <img class="car_cont sprite-dodge" title="سيارات دودج" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات دوج">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/همر">
+                       <a data_value="همر" class="gallerypic tag" href="/pic/همر">
                             <img class="car_cont sprite-mini" title="سيارات همر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات همر">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/كاديلاك">
+                       <a data_value="كاديلاك" class="gallerypic tag" href="/pic/كاديلاك">
                             <img class="car_cont sprite-cadillac" title="سيارات كاديلاك" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات كاديلاك">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/اودي">
+                       <a data_value="اودي" class="gallerypic tag" href="/pic/اودي">
                             <img class="car_cont sprite-audi" title="اودي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="اودي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a> 
-                        <a class="gallerypic" href="/pic/هوندا">
+                       <a data_value="هوندا" class="gallerypic tag" href="/pic/هوندا">
                             <img class="car_cont sprite-honda" title="هوندا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="هوندا">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/لاند روفر">
+                       <a data_value="لاند روفر" class="gallerypic tag" href="/pic/لاند روفر">
                             <img class="car_cont sprite-landrover" title="لاندروفر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="لاندروفر">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>  
-                        <a class="gallerypic" href="/pic/فولكس واجن">
+                       <a data_value="فولكس واجن" class="gallerypic tag" href="/pic/فولكس واجن">
                             <img class="car_cont sprite-volkswagen" title="فولكس واجن" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="فولكس واجن">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/مازدا">
+                       <a data_value="مازدا" class="gallerypic tag" href="/pic/مازدا">
                             <img class="car_cont sprite-mazda" title="مازدا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="مازدا">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/ميتسوبيشي">
+                       <a data_value="ميتسوبيشي" class="gallerypic tag" href="/pic/ميتسوبيشي">
                             <img class="car_cont sprite-mitsubishi" title="ميتسوبيشي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="ميتسوبيشي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/هونداي">
+                       <a data_value="هونداي" class="gallerypic tag" href="/pic/هونداي">
                             <img class="car_cont sprite-hyundai" title="هونداي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="هونداي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/جيب">
+                       <a data_value="جيب" class="gallerypic tag" href="/pic/جيب">
                             <img class="car_cont sprite-jeep" title="جيب" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="جيب">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/انفنيتي">
+                       <a data_value="انفنيتي" class="gallerypic tag" href="/pic/انفنيتي">
                             <img class="car_cont sprite-infiniti" title="انفنيتي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="انفنيتي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/سوزوكي">
+                       <a data_value="سوزوكي" class="gallerypic tag" href="/pic/سوزوكي">
                             <img class="car_cont sprite-suzuki" title="سوزوكي" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سوزوكي">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
-                        <a class="gallerypic" href="/pic/كيا">
+                       <a data_value="كيا" class="gallerypic tag" href="/pic/كيا">
                             <img class="car_cont sprite-kia" title="كيا" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="كيا">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="/pic/كرايزلر">
+                       <a data_value="كرايزلر" class="gallerypic tag" href="/pic/كرايزلر">
                             <img class="car_cont sprite-chrysler" title="كرايزلر" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="كرايزلر">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="/pic/بورش">
+                       <a data_value="بورش" class="gallerypic tag" href="/pic/بورش">
                             <img class="car_cont sprite-porsche" title="بورش" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="بورش">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="/pic/قطع غيار وملحقات">
+                       <a data_value="قطع غيار وملحقات" class="gallerypic tag" href="/pic/قطع غيار وملحقات">
                             <img class="car_cont sprite-parts" title="قطع غيار وملحقات" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="قطع غيار وملحقات">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>  
 
-                        <a class="gallerypic" href="/pic/شاحنات ومعدات ثقيلة">
+                       <a data_value="شاحنات ومعدات ثقيلة" class="gallerypic tag" href="/pic/شاحنات ومعدات ثقيلة">
                             <img class="car_cont sprite-trucks" title="شاحنات ومعدات ثقيلة" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="شاحنات ومعدات ثقيلة">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="/pic/دبابات">
+                       <a data_value="دبابات" class="gallerypic tag" href="/pic/دبابات">
                             <img class="car_cont sprite-bikes" title="دبابات" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="دبابات">  <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
 
-                        <a class="gallerypic" href="/pic/سيارات تراثية">
+                       <a data_value="سيارات تراثية" class="gallerypic tag" href="/pic/سيارات تراثية">
                             <img class="car_cont sprite-classic" title="سيارات تراثية" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات تراثية"> <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="/pic/سيارات مصدومه">
+                       <a data_value="سيارات مصدومه" class="gallerypic tag" href="/pic/سيارات مصدومه">
                             <img class="car_cont sprite-damaged" title="سيارات مصدومه" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات مصدومه"> <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
 
-                        <a class="gallerypic" href="/pic/سيارات للتنازل">
+                       <a data_value="سيارات للتنازل" class="gallerypic tag" href="/pic/سيارات للتنازل">
                             <img class="car_cont sprite-tanazul" title="سيارات للتنازل" src="<?php echo get_template_directory_uri(); ?>/images/clear.gif" alt="سيارات للتنازل"> <span class="pic-icon"><i class="fa fa-camera-retro  "></i></span></a>
                     </div>
 
                 </div>
+				</form>
             </div>
             <hr>
             <ul class="nav nav-tabs">
                 <li class="active"><a href="/tags/">أجهزة</a></li>
             </ul>
             <br>
+			<form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="get">
+			 <input type="hidden" name="ad_tags" class="tag_input"><br>
+
             <div>
                 <div class="glyph">
-                    <a href="/tags/ابل Apple">   <i class="fa fa-apple fa-3x"></i> </a>
+                    <a data_value="ابل" class="tag" href="/tags/ابل Apple">   <i class="fa fa-apple fa-3x"></i> </a>
                 </div>
                 <div class="glyph">
-                    <a href="/tags/سامسونج Samsung" class="tag-cat"><i class="icon-Samsung fa-3x"></i></a>
+                    <a data_value="سامسونج" href="/tags/سامسونج Samsung" class="tag-cat tag"><i class="icon-Samsung fa-3x"></i></a>
                 </div>
                 <div class="glyph">
-                    <a href="/tags/بلاك بيري BlackBerry" class="tag-cat"><i class="icon-BlackBerry fa-3x"></i></a>
+                    <a data_value="بلاك بيري" href="/tags/بلاك بيري BlackBerry" class="tag-cat tag"><i class="icon-BlackBerry fa-3x"></i></a>
                 </div>
                 <div class="glyph">
-                    <a href="/tags/مايكروسوفت Microsoft" class="tag-cat"><i class="icon-Microsoft fa-3x"></i></a>
+                    <a data_value="مايكروسوفت" href="/tags/مايكروسوفت Microsoft" class="tag-cat tag"><i class="icon-Microsoft fa-3x"></i></a>
                 </div>
                 <div class="glyph">
-                    <a href="/tags/فوجي فيلم fujifilm" class="tag-cat"><i class="icon-Fujifilm fa-3x"></i></a>
+                    <a data_value="فوجي فيلم" href="/tags/فوجي فيلم fujifilm" class="tag-cat tag"><i class="icon-Fujifilm fa-3x"></i></a>
                 </div>
                 <div class="glyph">
-                    <a href="/tags/توشيبا Toshiba" class="tag-cat"><i class="icon-Toshiba fa-3x"></i></a>
-                </div>
-
-                <div class="glyph">
-                    <a href="/tags/نوكيا Nokia" class="tag-cat"><i class="icon-Nokia fa-3x"></i></a>
+                    <a data_value="توشيبا" href="/tags/توشيبا Toshiba" class="tag-cat tag"><i class="icon-Toshiba fa-3x"></i></a>
                 </div>
 
                 <div class="glyph">
-
-                    <a href="/tags/كانون Canon" class="tag-cat"><i class="icon-Canon fa-3x"></i></a>
-                </div>
-                <div class="glyph">
-
-                    <a href="/tags/سوني Sony" class="tag-cat"><i class="icon-Sony fa-3x"></i></a>
-                </div>
-                <div class="glyph">
-
-                    <a href="/tags/ال جي LG" class="tag-cat"><i class="icon-LG fa-3x"></i></a>
+                    <a data_value="نوكيا" href="/tags/نوكيا Nokia" class="tag-cat tag"><i class="icon-Nokia fa-3x"></i></a>
                 </div>
 
                 <div class="glyph">
-                    <a href="/tags/اتش تي سي htc" class="tag-cat"><i class="icon-HTC fa-3x"></i></a>
+
+                    <a data_value="كانون" href="/tags/كانون Canon" class="tag-cat tag"><i class="icon-Canon fa-3x"></i></a>
+                </div>
+                <div class="glyph">
+
+                    <a data_value="سوني" href="/tags/سوني Sony" class="tag-cat tag"><i class="icon-Sony fa-3x"></i></a>
+                </div>
+                <div class="glyph">
+
+                    <a data_value="ال جي" href="/tags/ال جي LG" class="tag-cat tag"><i class="icon-LG fa-3x"></i></a>
                 </div>
 
                 <div class="glyph">
-                    <a href="/tags/أرقام مميزة" class="tag-cat">أرقام مميزة</a>
+                    <a data_value="اتش تي سي" href="/tags/اتش تي سي htc" class="tag-cat tag"><i class="icon-HTC fa-3x"></i></a>
+                </div>
+
+                <div class="glyph">
+                    <a data_value="أرقام مميزة" href="/tags/أرقام مميزة" class="tag-cat tag">أرقام مميزة</a>
                 </div>
                 <br> <br> <br>
             </div>
+			</form>
 
             <div class="clear"></div>
             <hr>
@@ -448,36 +459,39 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                 <li class="active"><a href="#">أقسام أخرى</a></li>
             </ul>
             <br>
+			<form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="get">
+			<input type="hidden" name="ad_tags" class="tag_input"><br>
             <div>
                 <div class="glyph">
 
-                    <a href="/tags/أبل"><i class="icon-camel fa-3x"></i> </a>
+                    <a data_value="أبل" class="tag" href="/tags/أبل"><i class="icon-camel fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="/tags/غنم"><i class="icon-sheep2 fa-3x"></i> </a>
+                    <a data_value="غنم" class="tag" href="/tags/غنم"><i class="icon-sheep2 fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="/tags/ماعز"><i class="icon-goat fa-3x"></i> </a>
+                    <a data_value="ماعز" class="tag" href="/tags/ماعز"><i class="icon-goat fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="/tags/دجاج"><i class="icon-chicken fa-3x"></i> </a>
+                    <a data_value="دجاج" class="tag" href="/tags/دجاج"><i class="icon-chicken fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="/tags/قطط"><i class="icon-cat fa-3x"></i> </a>
+                    <a data_value="قطط" class="tag" href="/tags/قطط"><i class="icon-cat fa-3x"></i> </a>
                 </div>
 
                 <div class="glyph">
-                    <a href="/tags/ببغاء"><i class="icon-parrot fa-3x"></i> </a>
+                    <a data_value="ببغاء" class="tag" href="/tags/ببغاء"><i class="icon-parrot fa-3x"></i> </a>
                 </div>
                 <br>
                 <div class="glyph">
-                    <a href="/tags/اثاث"><i class="icon-athath fa-3x"></i> </a>
+                    <a data_value="اثاث" class="tag" href="/tags/اثاث"><i class="icon-athath fa-3x"></i> </a>
                 </div>
             </div>
+			</form>
             <div class="clear"></div>
             <hr>
             <ul class="nav nav-tabs">
@@ -501,10 +515,18 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                   ) */
                 $tags_array = get_tags();
                 $tags_array = get_terms('ad_tag', array('hide_empty' => false));
-                foreach ($tags_array as $t):
-                    echo '<a title="' . $t->name . '" href="" class="tag">' . $t->name . '#</a><br>';
-                endforeach;
-                ?>                
+				
+				?>
+				
+				
+				<form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="get">
+					<?php 
+						echo '<input type="hidden" name="ad_tags" class="tag_input"><br>';
+					foreach ($tags_array as $t):
+						echo '<a data_value = "' . $t->name . '" title="' . $t->name . '" href="javascript:void(0)" class="tag">' . $t->name . '#</a><br>';
+					endforeach;
+					?> 			
+				</form>
             </div>
             <div class="clear"></div>
             <hr>
@@ -513,4 +535,14 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
     </div>
 
 </div>
+<script>
+var $ = jQuery.noConflict();
+$(document).ready( function(){
+	$('.tag').on('click', function(e){
+		e.preventDefault();
+		$(this).closest('form').find('.tag_input').val($(this).attr('data_value'));
+		$(this).closest('form').submit();
+	});
+});
+</script>
 <!-- /content -->
