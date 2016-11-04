@@ -118,9 +118,9 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                             </button> 
                             <button href="#" id="grid" class="btn btn-primary active">
                                 <i class="fa fa-globe"></i>
-                            </button>                         
-                            <a href="<?php echo CP_ADD_NEW_URL; ?>" class="btn btn-success btn-lg pull-right btn_add"> <i class="fa fa-plus "></i><?php _e('Post your ad with us', APP_TD); ?></a>
-                        </div>
+                            </button>
+							<a href="<?php echo CP_ADD_NEW_URL; ?>" class="btn btn-success btn-lg pull-right btn_add"> <i class="fa fa-plus "></i><?php _e('Post your ad with us', APP_TD); ?></a>
+					   </div>
                     </div>
                     <div id="products" class="row margin-0 list-group padding-top-4per">
                         <div class="item col-md-12 nav-hide list-group-item margin-0">
@@ -133,7 +133,30 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                         <?php
                         // show all ads but make sure the sticky featured ads don't show up first
                         $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-                        query_posts(array('post_type' => APP_POST_TYPE, 'ignore_sticky_posts' => 1, 'paged' => $paged));
+
+                        $query = array(
+//                            'post_type' => 'ad_listing',
+                            'post_type' => APP_POST_TYPE,
+                            'paged' => $paged,
+                            'posts_per_page' => get_option('posts_per_page'),
+                            //'posts_per_page' => get_option('posts_per_page'),
+                            'orderby' => $_GET['orderby'],
+                            'ignore_sticky_posts' => 1,
+                            'order' => $_GET['order'],
+                            'meta_key' => $_GET['meta_key'],
+                            'ad_tag' => $_GET['tag'],
+                            'ad_cat' => $_GET['category'],
+//    'tax_query' => array(
+//        array(
+//            'taxonomy' => 'ad_cat',
+//            'field' => 'name',
+//            'terms' => $_GET['category'],
+//        //'operator' => 'IN'
+//        )
+//    )
+                        );
+//                        query_posts(array('post_type' => APP_POST_TYPE, 'ignore_sticky_posts' => 1, 'paged' => $paged));
+                        query_posts($query);
                         $total_pages = max(1, absint($wp_query->max_num_pages));
                         get_template_part('loop', 'ad_listing');
                         if ($total_pages > 1) {
@@ -149,7 +172,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
     <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 round-border bg-grey">
         <p class="moreoptions showhideside" style="display: none;width:30%;margin-right:10px">إظهار الخيارات</p>
         <div class="side-col  ">
-            <form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="post" action="/process-more-models.php">
+            <form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="get" action="">
                 <select class="form-control margin-top-10" name="city" id="marka">
                     <option value="marka">أختر ماركة السيارة</option>
                     <option value="تويوتا">تويوتا</option>
@@ -182,6 +205,16 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                     <option value="">كل المدن</option>
                     <option value="الرياض">الرياض</option><option value="الشرقيه">الشرقيه</option><option value="جده">جده</option><option value="مكه">مكه</option><option value="ينبع">ينبع</option><option value="حفر الباطن">حفر الباطن</option><option value="المدينة">المدينة</option><option value="الطايف">الطايف</option><option value="تبوك">تبوك</option><option value="القصيم">القصيم</option><option value="حائل">حائل</option><option value="أبها">أبها</option><option value="الباحة">الباحة</option><option value="جيزان">جيزان</option><option value="نجران">نجران</option><option value="الجوف">الجوف</option><option value="عرعر">عرعر</option><option value="الكويت">الكويت</option><option value="الإمارات">الإمارات</option><option value="قطر">قطر</option><option value="البحرين">البحرين</option></select>
 
+                <?php $all_category = get_terms('ad_cat', array('hide_empty' => false)); ?>
+                <select name="category" class="form-control margin-top-10">
+                    <?php
+                    echo "<option " . selected($_GET['category'], '') . " value=''>All category</option>";
+                    foreach ($all_category as $value => $cat) {
+                        echo "<option " . selected($_GET['category'], $cat->name) . " value='$cat->name'>$cat->name</option>";
+                    }
+                    ?>
+                </select>
+
                 <button type="submit" class="btn  btn-success form-control  margin-top-10"><i class="fa fa-search"></i> </button>
                 <div class="pull-left"> 
                     <p class="showmoreoptions moreoptions">خيارات أكثر</p>
@@ -200,7 +233,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                 </div>
             </form>
             <br class="visible-xs">
-            <form action="/search-process.php" method="post" novalidate="">
+            <form action="" method="get" novalidate="">
                 <div class="row">
                     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><input type="text" class="form-control " placeholder="ادخل رقم الاعلان" name="adsnumber" pattern="[0-9]*"></div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> <button type="submit" class="btn btn-primary ">انتقال</button></div>
@@ -480,4 +513,4 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
     </div>
 
 </div>
-    <!-- /content -->
+<!-- /content -->
