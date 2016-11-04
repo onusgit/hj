@@ -41,12 +41,12 @@ global $cp_options;
             <div class="collapse navbar-collapse navbar-ex1-collapse col-md-9">
                 <ul class="nav navbar-nav menu">
                     <?php if(is_user_logged_in()):?>
-                        <li><a href="<?php echo site_url(); ?>/dashboard/">Dashboard</a></li>                        
+                        <li><a href="<?php echo site_url(); ?>/dashboard/">لوحة التحكم</a></li>                        
                     <?php else:?>
                     <li><a href="<?php echo site_url(); ?>/login">تسجيل الدخول  </a></li>
                     <li><a href="<?php echo site_url(); ?>/register"> التسجيل بالموقع</a></li>
                     <?php endif;?>
-                    <li class=" "><a href="<?php echo site_url(); ?>/commission">حساب عمولة الموقع</a></li>
+                    <!--<li class=" "><a href="<?php echo site_url(); ?>/commission">حساب عمولة الموقع</a></li>-->
                     <li class="divider visible-xs"></li>
                     <li class="visible-xs"><a href="<?php echo site_url(); ?>"> حراج السيارات</a></li>
                     <li class="visible-xs"><a href="<?php echo site_url(); ?>"> أجهزة</a></li>
@@ -60,7 +60,7 @@ global $cp_options;
                         <a data-toggle="dropdown" class="dropdown" href="#"> <i class="fa fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo site_url(); ?>/advsearch"> البحث المتقدم</a></li>
-                            <li><a href="<?php echo site_url(); ?>/commission">حساب عمولة الموقع</a></li>
+                            <!--<li><a href="<?php echo site_url(); ?>/commission">حساب عمولة الموقع</a></li>-->
                             <li><a href="<?php echo site_url(); ?>/contact">اتصل بنا</a></li>
                             <li class="divider"></li>
                         </ul>

@@ -17,7 +17,13 @@ global $cp_options;
         </div>        
         <div class="caption">
             <div class="group inner list-group-item-heading col-md-2">
-                <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . __(' ago'); ?>
+                <?php 
+                $text_array = array('min' => 'د', 'mins' => 'د', 'hour' =>'س', 'hours' => 'س', 'day' =>'يوم', 'days' => 'ايام', 'week' => 'اسبوع', 'weeks' => 'اسابيع', 'month' => 'شهر', 'months' => 'اشهر', 'year' => 'سنة', 'years' => 'سنوات');
+                $time = human_time_diff(get_the_time('U'), current_time('timestamp'));
+                $time_arr = explode(" ", $time);
+//                print_r($time_arr);
+                echo @'قبل'." ".$time_arr[0]." ".$text_array[$time_arr[1]];
+               // echo "--".human_time_diff( get_the_time('U'), current_time('timestamp')) . __(' ago'); ?>
             </div>
             <div class="group inner list-group-item-heading col-md-2">
                <?php echo get_the_author(); ?></div>

@@ -6,7 +6,7 @@
  */
 
 if( is_admin() ){
-	add_action( 'admin_menu', 'appthemes_admin_menu_setup', 11 );
+//	add_action( 'admin_menu', 'appthemes_admin_menu_setup', 11 );
 	add_action( 'admin_print_styles', 'appthemes_payments_menu_sprite' );
 	add_action( 'admin_print_styles', 'appthemes_payments_icon' );
 	add_action( 'init', 'appthemes_register_payments_settings', 12);

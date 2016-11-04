@@ -5,67 +5,75 @@
  * @package ClassiPress\Templates
  * @author  AppThemes
  * @since   ClassiPress 3.0
+ * 
+ * post meta
+ * (
+    [cp_city] => Array
+        (
+            [0] => مكه
+        )
+
+    [cp_sys_ad_conf_id] => Array
+        (
+            [0] => 824581c31c2cef4b
+        )
+
+    [cp_sys_userIP] => Array
+        (
+            [0] => 175.142.114.213
+        )
+
+    [cp_sys_ad_duration] => Array
+        (
+            [0] => 90
+        )
+
+    [cp_sys_total_ad_cost] => Array
+        (
+            [0] => 0
+        )
+
+    [cp_sys_expire_date] => Array
+        (
+            [0] => 2017-02-02 07:01:34
+        )
  */
 ?>
-
-
 <div class="content">
-
     <div class="content_botbg">
-
         <div class="content_ads">
-
-            <!--<div id="breadcrumb"><?php // cp_breadcrumb();             ?></div>-->
-
+            <!--<div id="breadcrumb"><?php // cp_breadcrumb();                ?></div>-->
             <div class="clr"></div>
-
             <div class="content_left_ads">
-
-                <?php do_action('appthemes_notices'); ?>
-
-                <?php appthemes_before_loop(); ?>
-
-                <?php if (have_posts()) : ?>
-
-                    <?php while (have_posts()) : the_post(); ?>
-
-                        <?php appthemes_before_post(); ?>
-
-                        <?php appthemes_stats_update($post->ID); //records the page hit ?>
-
+                <?php
+                do_action('appthemes_notices');
+                appthemes_before_loop();
+                if (have_posts()) :
+                    while (have_posts()) : the_post();
+                        appthemes_before_post();
+                        $post_meta = get_post_meta($post->ID);
+                        appthemes_stats_update($post->ID); //records the page hit 
+                        ?>
                         <div class="shadowblock_out <?php cp_display_style('featured'); ?>">
-
                             <div class="shadowblock">
-
-                                <?php // appthemes_before_post_title(); ?>
-
-                                                                                                                                <!--<h1 class="single-listing"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php // the_title();             ?></a></h1>-->
-
+                                <?php // appthemes_before_post_title();  ?>
+                                <!--<h1 class="single-listing"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php // the_title();               ?></a></h1>-->
                                 <div class="clr"></div>
-
-                                <?php // appthemes_after_post_title(); ?>
-
+        <?php // appthemes_after_post_title();  ?>
                                 <!--<div class="pad5 dotted"></div>-->
                                 <div class=" row ad_high margin-0">
                                     <h3 itemprop="name"><font><font> »<?php the_title(); ?></font></font></h3>
                                     <div class=" comment_header">
                                         <!--&nbsp; <a href="https://haraj.com.sa/users/qwqw0000" class="username"><font><font>qwqw0000</font></font></a>-->
                                         <font><font>  <?php echo appthemes_display_date($post->post_date); ?> </font></font>
-                                        <!--<a href="https://haraj.com.sa/city/الرياض" class="city-head"><font><font>Riyadh</font></font></a>-->
 
                                         <br><font><font> 
-
-                                        </font></font><div class="pull-left">
-
-                                            <!--
-                                            
-                                                                                        <a href="https://haraj.com.sa/nextad.php?ads_id=16542717&amp;url=http://haraj.com/&amp;nextads=%D9%81%D9%8A%D9%84%D8%A7_%D9%84%D9%84%D8%A8%D9%8A%D8%B9_%D9%81%D9%8A_%D8%AD%D9%8A_%D8%A7%D9%84%D9%86%D8%B3%D9%8A%D9%85_%D8%A7%D9%84%D8%BA%D8%B1%D8%A8%D9%8A_%D9%81%D9%8A_%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6" class="nextad"><font><font> Next ←  </font></font></a>
-                                                                                        <br>-->
-                                        </div>
+                                        <font>رقم الاعلان :<font><?php echo isset($post_meta['cp_sys_ad_conf_id'][0])?$post_meta['cp_sys_ad_conf_id'][0]:''?></font></font>
+                                        </font></font>                                        
                                     </div>
 
                                 </div>
-                                <div class="bigright padding-top-20 <?php // cp_display_style('ad_single_images');             ?>">
+                                <div class="bigright padding-top-20 <?php // cp_display_style('ad_single_images');                ?>">
 
                                     <ul>
 
@@ -83,83 +91,66 @@
                                         cp_get_ad_details($post->ID, $cat_id);
                                         ?>
 
-                                        <li id="cp_listed"><span><?php _e('Listed:', APP_TD); ?></span> <?php echo appthemes_display_date($post->post_date); ?></li>
+                                       <!--  <li id="cp_listed"><span><?php _e('Listed:', APP_TD); ?></span> <?php echo appthemes_display_date($post->post_date); ?></li>
                                         <?php if ($expire_date = get_post_meta($post->ID, 'cp_sys_expire_date', true)) { ?>
                                             <li id="cp_expires"><span><?php _e('Expires:', APP_TD); ?></span> <?php echo cp_timeleft($expire_date); ?></li>
-                                        <?php } ?>
+                                        <?php } ?> -->
 
                                     </ul>
 
                                 </div><!-- /bigright -->
-
-
                                 <?php if ($cp_options->ad_images) { ?>
-
                                     <div class="bigleft">
-
-                                        <div id="main-pic">
-
-                                            <?php
-                                            $images = get_children(array('post_parent' => $post->ID, 'post_status' => 'inherit', 'numberposts' => 1, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'ID'));
-                                            if ($images) {
+                                        <?php
+                                        $images = get_children(array('post_parent' => $post->ID, 'post_status' => 'inherit', 'numberposts' => 1, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'ID'));
+                                        if ($images) {
+                                            ?>
+                                            <div id="main-pic">                                            
+                                                <?php
                                                 // move over bacon
                                                 $image = array_shift($images);
-                                                $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);                                              
+                                                $alt = get_post_meta($image->ID, '_wp_attachment_image_alt', true);
                                                 // grab the large image for onhover preview
-                                                $adlargearray = wp_get_attachment_image_src($image->ID, 'large');                                                
+                                                $adlargearray = wp_get_attachment_image_src($image->ID, 'large');
                                                 $img_large_url_raw = $adlargearray[0];
 
                                                 // must be a v3.0.5+ created ad
                                                 if ($adlargearray) {
                                                     echo '<a href="' . $img_large_url_raw . '" class="img-main" data-rel="colorbox" title="' . the_title_attribute('echo=0') . '"><img src="' . $img_large_url_raw . '" title="' . $alt . '" alt="' . $alt . '" /></a>';
                                                 }
+                                                ?>
+                                                <div class="clr"></div>
+                                            </div>
 
-                                                // no image so return the placeholder thumbnail
-                                            } else {
-                                                echo '<img class="attachment-medium" alt="" title="" src="' . appthemes_locate_template_uri('images/no-thumb.jpg') . '" />';
-                                            }
-
+                                            <?php
+                                            // no image so return the placeholder thumbnail
+                                        }
+//                                            else {
+//                                                echo '<img class="attachment-medium" alt="" title="" src="' . appthemes_locate_template_uri('images/no-thumb.jpg') . '" />';
+//                                            }
 //                                            cp_get_image_url();
-                                            ?>
-
-                                            <div class="clr"></div>
-
-                                        </div>
-
+                                        ?>
                                         <div id="thumbs-pic">
-
-                                            <?php cp_get_image_url_single($post->ID, 'thumbnail', $post->post_title, -1); ?>
-
+            <?php cp_get_image_url_single($post->ID, 'thumbnail', $post->post_title, -1); ?>
                                             <div class="clr"></div>
-
                                         </div>
-
                                     </div><!-- /bigleft -->
-
                                 <?php } ?>
-
                                 <div class="clr"></div>
-
-                                <?php appthemes_before_post_content(); ?>
-
+                                    <?php appthemes_before_post_content(); ?>
                                 <div class="single-main">
-
                                     <?php
                                     // 3.0+ display text areas in content area before content.
                                     cp_get_ad_details($post->ID, $cat_id, 'content');
                                     ?>
-
-                                                                                                                    <!--<h3 class="description-area"><?php _e('Description', APP_TD); ?></h3>-->
-
-
                                     <div class="contact padding-top-20">
-                                        <span class="label label-success"><font><font>Contact Information </font><font>: </font></font></span>   <font><strong><a href="#"><font>+999999999999</font></a></strong></font><strong>  <a href="tel:+9000000000"><font></font></a>  <i class="fa fa-phone"></i></strong> 
+                                        <span class="label label-success"><font><font>معلومات الاتصال</font><font>: </font></font></span>   <font><strong><a href="#"><font>+999999999999</font></a></strong></font><strong>  <a href="tel:+9000000000"><font></font></a>  <i class="fa fa-phone"></i></strong> 
                                         <br>  <br> 
                                     </div>
-                                    <div class="pull-left">
-                                        <a href="" class="nextad"><font><font class=""> ←  </font></font></a>
-                                        <br>
-                                    </div>
+                                    <!--                                    <div class="pull-left">
+                                                                            <a href="" class="nextad"><font><font class=""> ←  </font></font></a>
+                                                                            <br>
+                                                                        </div>-->
 
                                     <div class="col-md-12 border-top-gray share_icon padding-20 border-bottom-gray">
                                         <div class="col-md-2"><i class="fa fa-twitter  fa-2x"></i></div>
@@ -168,15 +159,16 @@
                                         <div class="col-md-2"><i class="fa fa-2x fa-heart" aria-hidden="true"></i></div>
                                         <div class="col-md-2"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></div>
                                     </div>
-                                    <?php the_content(); ?>
+                                <?php the_content(); ?>
                                 </div>
-                                <?php // appthemes_after_post_content(); ?>
+        <?php // appthemes_after_post_content();   ?>
 
                             </div><!-- /shadowblock -->
 
                         </div><!-- /shadowblock_out -->
 
-                        <?php appthemes_after_post(); ?>
+                        <?php appthemes_after_post();
+                        ?>
 
                     <?php endwhile; ?>
 
@@ -186,21 +178,21 @@
 
                     <?php appthemes_loop_else(); ?>
 
-                <?php endif; ?>
+<?php endif; ?>
 
                 <div class="clr"></div>
 
                 <?php appthemes_after_loop(); ?>
 
-                <?php wp_reset_query(); ?>
+<?php wp_reset_query(); ?>
 
                 <div class="clr"></div>
 
-                <?php comments_template('/comments-ad_listing.php'); ?>
+<?php comments_template('/comments-ad_listing.php'); ?>
 
             </div><!-- /content_left -->
 
-            <?php // get_sidebar('ad'); ?>
+<?php // get_sidebar('ad');   ?>
             <div class="content_right suggest_post">       
 
                 إعلانات أخرى لـ: <a href="#" class="username">راعي السوبارو</a>
