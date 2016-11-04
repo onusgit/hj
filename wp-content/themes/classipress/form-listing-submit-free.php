@@ -21,7 +21,7 @@
 
 					<div id="step3">
 
-						<h2 class="dotted"><?php _e( 'Ad Listing Received', APP_TD ); ?></h2>
+						<h2 class="dotted"><?php _e( 'تم نشر الإعلان بنجاح', APP_TD ); ?></h2>
 
 						<img src="<?php echo appthemes_locate_template_uri( 'images/step3.gif' ); ?>" alt="" class="stepimg" />
 
@@ -36,15 +36,15 @@
 						<?php
 							if ( 'publish' == get_post_status( $listing->ID ) ) {
 
-								echo html( 'h3', __( 'Thank you! Your ad listing has been submitted and is now live.', APP_TD ) );
-								echo html( 'p', __( 'Visit your dashboard to make any changes to your ad listing or profile.', APP_TD ) );
-								echo html( 'a', array( 'href' => get_permalink( $listing->ID ) ), __( 'View your new ad listing.', APP_TD ) );
+								echo html( 'h3', __( 'شكرا! تم نشر الإعلان وهو الان متاح على الموقع.', APP_TD ) );
+								echo html( 'p', __( 'للتعديل قم بزيارة لوحة التحكم الخاصة بك.', APP_TD ) );
+								echo html( 'a', array( 'href' => get_permalink( $listing->ID ) ), __( 'شاهد اعلانك من هنا.', APP_TD ) );
 
 							} else {
 
 								echo html( 'h3', __( 'Thank you! Your ad listing has been submitted for review.', APP_TD ) );
 								echo html( 'p', __( 'You can check the status by viewing your dashboard.', APP_TD ) );
-								echo html( 'a', array( 'href' => get_permalink( $listing->ID ) ), __( 'View your new ad listing.', APP_TD ) );
+								echo html( 'a', array( 'href' => get_permalink( $listing->ID ) ), __( 'شاهد اعلانك من هنا.', APP_TD ) );
 
 							}
 						?>

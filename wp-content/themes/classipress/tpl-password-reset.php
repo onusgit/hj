@@ -53,7 +53,7 @@
 							</div>
 
 							<!-- autofocus the field -->
-							<script type="text/javascript">try{document.getElementById('pass1').focus();}catch(e){}</script>
+							<!--<script type="text/javascript">try{document.getElementById('pass1').focus();}catch(e){}</script>-->
 
 						</form>
 

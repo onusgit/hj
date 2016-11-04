@@ -10,7 +10,7 @@ function _appthemes_localize_scripts() {
 	// jQuery Validate
 	wp_register_script( 'validate-lang', APP_FRAMEWORK_URI . '/js/validate/jquery.validate-lang.js', array( 'validate' ) );
 	wp_localize_script( 'validate-lang', 'validateL10n', array(
-		'required' =>    __( 'This field is required.', APP_TD ),
+		'required' =>    __( 'حقل الزامي.', APP_TD ),
 		'remote' =>      __( 'Please fix this field.', APP_TD ),
 		'email' =>       __( 'Please enter a valid email address.', APP_TD ),
 		'url' =>         __( 'Please enter a valid URL.', APP_TD ),

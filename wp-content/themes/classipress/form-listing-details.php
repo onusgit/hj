@@ -40,14 +40,14 @@
 
                             <ol>
                                 <li>
-                                    <div class="labelwrapper"><label><?php _e('Category:', APP_TD); ?></label></div>
-                                    <div class="text-left"><strong><?php echo $category->name; ?></strong>&nbsp;&nbsp;<small><a href="<?php echo $select_category_url; ?>"><?php _e('(change)', APP_TD); ?></a></small></div>
+                                    <div class="labelwrapper"><label><?php _e('الفئة:', APP_TD); ?></label></div>
+                                    <div class="text-left"><strong><?php echo $category->name; ?></strong>&nbsp;&nbsp;<small><a href="<?php echo $select_category_url; ?>"><?php _e('(تغيير)', APP_TD); ?></a></small></div>
                                 </li>
 
                                 <?php cp_show_form($category->term_id, $listing); ?>
 
                                 <p class="btn1">
-                                    <input type="submit" name="step1" id="step1" class="btn btn-success" value="<?php _e('Continue &rsaquo;&rsaquo;', APP_TD); ?>" />
+                                    <input type="submit" name="step1" id="step1" class="btn btn-success" value="<?php _e('المتابعة &rsaquo;&rsaquo;', APP_TD); ?>" />
                                 </p>
 
                             </ol>

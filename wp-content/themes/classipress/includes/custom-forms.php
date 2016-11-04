@@ -118,7 +118,7 @@ if ( ! function_exists( 'cp_formbuilder' ) ) {
 				<div class="labelwrapper">
 					<label><?php if ( $result->field_tooltip ) { ?><a href="#" tip="<?php echo esc_attr( translate( $result->field_tooltip, APP_TD ) ); ?>" tabindex="999"><div class="helpico"></div></a><?php } ?><?php echo esc_html( translate( $result->field_label, APP_TD ) ); ?>: <?php if ( $result->field_req ) echo '<span class="colour">*</span>'; ?></label>
 					<?php if ( $result->field_type == 'text area' && ( $cp_options->allow_html ) ) { // only show this for tinymce since it's hard to position the error otherwise ?>
-						<br /><label class="invalid tinymce" for="<?php echo esc_attr($result->field_name); ?>"><?php _e( 'This field is required.', APP_TD ); ?></label>
+						<br /><label class="invalid tinymce" for="<?php echo esc_attr($result->field_name); ?>"><?php _e( 'حقل الزامي.', APP_TD ); ?></label>
 					<?php } ?>
 				</div>
 				<?php

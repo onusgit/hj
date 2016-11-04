@@ -1370,7 +1370,7 @@ function appthemes_date_posted( $date ) {
 	$time_diff = time() - $time;
 
 	if ( $time_diff > 0 && $time_diff < 24*60*60 ) {
-		printf( __( '%s ago', APP_TD ), human_time_diff( $time ) );
+		printf( __( '%s بوع', APP_TD ), human_time_diff( $time ) );
 	} else {
 		echo mysql2date( get_option( 'date_format' ), $date );
 	}

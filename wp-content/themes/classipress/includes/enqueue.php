@@ -98,7 +98,7 @@ function cp_load_scripts() {
 		'currency_position' => $cp_options->currency_position,
 		'home_url' => home_url( '/' ),
 		'ajax_url' => admin_url( 'admin-ajax.php', 'relative' ),
-		'text_processing' => __( 'Processing...', APP_TD ),
+		'text_processing' => __( 'تنفيذ...', APP_TD ),
 		'text_require_images' => __( 'Please upload at least 1 image.', APP_TD ),
 		'text_before_delete_ad' => __( 'Are you sure you want to delete this ad?', APP_TD ),
 		'text_mobile_navigation' => __( 'Navigation', APP_TD ),

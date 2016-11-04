@@ -21,7 +21,7 @@
 
                     <div id="step2">
 
-                        <h2 class="dotted"><?php _e('Review Your Listing', APP_TD); ?></h2>
+                        <h2 class="dotted"><?php _e('مراجعة الاعلان', APP_TD); ?></h2>
 
                         <img src="<?php echo appthemes_locate_template_uri('images/step2.gif'); ?>" alt="" class="stepimg" />
 
@@ -52,9 +52,9 @@
                             </p>-->
 
                             <p class="btn2">
-                                <input type="button" name="goback" class="btn btn-primary" value="<?php _e('Go back', APP_TD); ?>" onClick="location.href = '<?php echo appthemes_get_step_url(appthemes_get_previous_step()); ?>';
+                                <input type="button" name="goback" class="btn btn-primary" value="<?php _e('الى الخلف', APP_TD); ?>" onClick="location.href = '<?php echo appthemes_get_step_url(appthemes_get_previous_step()); ?>';
                                                                         return false;" />
-                                <input type="submit" name="step2" id="step2" class="btn btn-success" value="<?php _e('Continue &rsaquo;&rsaquo;', APP_TD); ?>" />
+                                <input type="submit" name="step2" id="step2" class="btn btn-success" value="<?php _e('المتابعة &rsaquo;&rsaquo;', APP_TD); ?>" />
                             </p>
 
                             <input type="hidden" name="action" value="<?php echo esc_attr($action); ?>" />

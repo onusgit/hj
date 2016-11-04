@@ -725,3 +725,21 @@ img {
     background-color: #fff;
     padding-right: 25px;
 }
+.footer.row{
+    margin: 0px;
+}
+#step1 .form_step .labelwrapper,#step1 .form_step input.text,#step1 .form_step .dropdownlist,#step1 .form_step textarea{
+    float: right;
+}
+#step1 .form_step .labelwrapper{
+    text-align: left;
+}
+#step1 .text-left{
+    text-align: right;
+}
+#step1 .form_step {
+    padding: 0px 75px 0 150px;
+}
+#step1 .form_step .dropdownlist{
+    width: 300px;
+}

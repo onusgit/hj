@@ -6,12 +6,10 @@
  * @author  AppThemes
  * @since   ClassiPress 3.2
  */
-
 // set a redirect for after logging in
 //if (isset($_REQUEST['redirect_to'])) {
 //    $redirect = $_REQUEST['redirect_to'];
 //}
-
 //if (!isset($redirect)) {
 //    $redirect = home_url();
 //}
@@ -90,11 +88,11 @@ $show_password_fields = apply_filters('show_password_fields_on_registration', tr
 
                             </form>
 
-<?php else : ?>
+                        <?php else : ?>
 
                             <p><?php _e('** User registration is currently disabled. Please contact the site administrator. **', APP_TD); ?></p>
 
-<?php endif; ?>
+                        <?php endif; ?>
 
                     </div>
 

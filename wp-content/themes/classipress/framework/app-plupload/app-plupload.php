@@ -37,7 +37,7 @@ function appthemes_plupload_form( $post_id = 0 ) {
 	}
 ?>
 	<li>
-		<div class="labelwrapper"><label><?php _e( 'Images', APP_TD ); ?></label></div>
+		<div class="labelwrapper"><label><?php _e( 'صور', APP_TD ); ?></label></div>
 		<div class="clear"></div>
 	</li>
 	<li>
@@ -69,11 +69,11 @@ function appthemes_plupload_form( $post_id = 0 ) {
 				</ul>
 			</div>
 			<div class="app-attachment-info">
-				<a id="app-attachment-upload-pickfiles" class="button" href="#"><?php _e( 'Add Image', APP_TD ); ?></a>
-				<p class="small"><?php printf( __( 'You are allowed to upload %s file(s).', APP_TD ), $options['allowed_files'] ); ?> <?php printf( __( 'Maximum file size: %s KB.', APP_TD ), $options['max_file_size'] ); ?></p>
+				<a id="app-attachment-upload-pickfiles" class="button" href="#"><?php _e( 'إضافة صورة', APP_TD ); ?></a>
+				<p class="small"><?php printf( __( 'يسمح لك بتحميل %s صور.', APP_TD ), $options['allowed_files'] ); ?> <?php printf( __( 'الحد الأقصى لحجم الصورة: %s KB.', APP_TD ), $options['max_file_size'] ); ?></p>
 				<?php if ( ! isset( $options['disable_switch'] ) || ! $options['disable_switch'] ) { ?>
-					<p class="small upload-flash-bypass"><?php _e( 'You are using the flash uploader. Problems? Try the <a href="#">browser uploader</a> instead.', APP_TD ); ?></p>
-					<p class="small upload-html-bypass"><?php _e( 'You are using the browser uploader. Problems? Try the <a href="#">flash uploader</a> instead.', APP_TD ); ?></p>
+					<p class="small upload-flash-bypass"><?php _e( 'ليس لديك فلاش. مشكلة؟ استخدم <a href="#">المتصفح الاساسية.</a> بدلا من.', APP_TD ); ?></p>
+					<p class="small upload-html-bypass"><?php _e( 'كنت تستخدم متصفح رافع. مشاكل؟ جرب ال<a href="#">رافع فلاش</a> بدلا من.', APP_TD ); ?></p>
 				<?php } ?>
 			</div>
 		</div>
