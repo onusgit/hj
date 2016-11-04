@@ -119,15 +119,15 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                             <button href="#" id="grid" class="btn btn-primary active">
                                 <i class="fa fa-globe"></i>
                             </button>
-							<a href="<?php echo CP_ADD_NEW_URL; ?>" class="btn btn-success btn-lg pull-right btn_add"> <i class="fa fa-plus "></i><?php _e('Post your ad with us', APP_TD); ?></a>
-					   </div>
+                            <a href="<?php echo CP_ADD_NEW_URL; ?>" class="btn btn-success btn-lg pull-right btn_add"> <i class="fa fa-plus "></i> <?php _e('انشر اعلانك معنا', APP_TD); ?></a>
+                        </div>
                     </div>
                     <div id="products" class="row margin-0 list-group padding-top-4per">
                         <div class="item col-md-12 nav-hide list-group-item margin-0">
-                            <div class="col-md-2 title_nav">Before</div>
-                            <div class="col-md-2 title_nav">Declared</div>
-                            <div class="col-md-2 title_nav">City</div>
-                            <div class="col-md-6 title_nav">Offer</div>
+                            <div class="col-md-2 title_nav">نشر في</div>
+                            <div class="col-md-2 title_nav">نشرت من قبل</div>
+                            <div class="col-md-2 title_nav">مدينة</div>
+                            <div class="col-md-6 title_nav">العنوان</div>
                         </div>
 
                         <?php
