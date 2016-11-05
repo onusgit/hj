@@ -37,6 +37,33 @@
         (
             [0] => 2017-02-02 07:01:34
         )
+ * 
+ * $post
+ *     [ID] => 115
+    [post_author] => 2
+    [post_date] => 2016-11-05 03:29:14
+    [post_date_gmt] => 2016-11-05 03:29:14
+    [post_content] => موقع هي على المعلن ولاتبرأ ذمة المعلن من العمولة إلا في حال دفعها،ذمة المعلن لاتبرأ من العمولة بمجرد ذكر أن العمولة على المشتري في الإعلان أتعهد أنا المعلن أن جميع المعلومات التي سوف أذكرها بالإعلان صحيحة وفي القسم الصحيح وأتعهد أن الصور التي سوف يتم عرضها هي صور حديثة لنفس السياره. وليست لسياره أخرى مشابهه أتعهد انا المعلن أن أقوم بدفع العمولة خلال أقل من 10 أيام من تاريخ إستلام كامل سعر السلعه.
+    [post_title] => سيارة
+    [post_excerpt] => 
+    [post_status] => publish
+    [comment_status] => open
+    [ping_status] => open
+    [post_password] => 
+    [post_name] => %d8%b3%d9%8a%d8%a7%d8%b1%d8%a9
+    [to_ping] => 
+    [pinged] => 
+    [post_modified] => 2016-11-05 03:29:14
+    [post_modified_gmt] => 2016-11-05 03:29:14
+    [post_content_filtered] => سيارة, موقع هي على المعلن ولاتبرأ ذمة المعلن من العمولة إلا في حال دفعها،ذمة المعلن لاتبرأ من العمولة بمجرد ذكر أن العمولة على المشتري في الإعلان أتعهد أنا المعلن أن جميع المعلومات التي سوف أذكرها بالإعلان صحيحة وفي القسم الصحيح وأتعهد أن الصور التي سوف يتم عرضها هي صور حديثة لنفس السياره. وليست لسياره أخرى مشابهه أتعهد انا المعلن أن أقوم بدفع العمولة خلال أقل من 10 أيام من تاريخ إستلام كامل سعر السلعه., الطائف, 950581d5200c0838, 2000
+    [post_parent] => 0
+    [guid] => http://kharjstore.com/?post_type=ad_listing&#038;p=115
+    [menu_order] => 0
+    [post_type] => ad_listing
+    [post_mime_type] => 
+    [comment_count] => 0
+    [filter] => raw
+ * 
  */
 ?>
 <div class="content">
@@ -52,6 +79,20 @@
                     while (have_posts()) : the_post();
                         appthemes_before_post();
                         $post_meta = get_post_meta($post->ID);
+                        $author =  get_userdata( $post->post_author); 
+                        /*[data] => stdClass Object
+        (
+                            [ID] => 2
+                            [user_login] => nagdawi
+                            [user_pass] => $P$Bgix7tL2rfGj4ErkumOlHn0FFr/bz61
+                            [user_nicename] => nagdawi
+                            [user_email] => nagdawi@yahoo.com
+                            [user_url] => 
+                            [user_registered] => 2016-10-15 15:27:50
+                            [user_activation_key] => 
+                            [user_status] => 0
+                            [display_name] => nagdawi
+                        )*/                      
                         appthemes_stats_update($post->ID); //records the page hit 
                         ?>
                         <div class="shadowblock_out <?php cp_display_style('featured'); ?>">
@@ -68,7 +109,10 @@
                                         <font><font>  <?php echo appthemes_display_date($post->post_date); ?> </font></font>
 
                                         <br><font><font> 
-                                        <font>رقم الاعلان :<font><?php echo isset($post_meta['cp_sys_ad_conf_id'][0])?$post_meta['cp_sys_ad_conf_id'][0]:''?></font></font>
+                                        <font>رقم الاعلان :<font>
+                                            <?php // echo isset($post_meta['cp_sys_ad_conf_id'][0])?$post_meta['cp_sys_ad_conf_id'][0]:''?>
+                                        <strong><?php if ( get_post_meta( $post->ID, 'cp_sys_ad_conf_id', true ) ) echo get_post_meta( $post->ID, 'cp_sys_ad_conf_id', true ); else _e( 'N/A', APP_TD ); ?></strong>
+                                        </font></font>
                                         </font></font>                                        
                                     </div>
 
@@ -76,7 +120,6 @@
                                 <div class="bigright padding-top-20 <?php // cp_display_style('ad_single_images');                ?>">
 
                                     <ul>
-
                                         <?php
                                         // grab the category id for the functions below
                                         $cat_id = appthemes_get_custom_taxonomy($post->ID, APP_TAX_CAT, 'term_id');
@@ -144,7 +187,13 @@
                                     cp_get_ad_details($post->ID, $cat_id, 'content');
                                     ?>
                                     <div class="contact padding-top-20">
-                                        <span class="label label-success"><font><font>معلومات الاتصال</font><font>: </font></font></span>   <font><strong><a href="#"><font>+999999999999</font></a></strong></font><strong>  <a href="tel:+9000000000"><font></font></a>  <i class="fa fa-phone"></i></strong> 
+                                        <span class="label label-success"><font><font>Email</font><font>: </font></font></span>
+                                        <font><strong><a href="mailto:<?php echo $author->user_email; ?>"><font><?php echo $author->user_email; ?></font></a></strong>
+                                                
+                                        </font>
+<!--                                        <strong>  <a href="mailto:<?php echo $author->user_email; ?>"><font></font></a> 
+                                            <i class="fa fa-envelope"></i>
+                                        </strong> -->
                                         <br>  <br> 
                                     </div>
                                     <!--                                    <div class="pull-left">
@@ -153,11 +202,11 @@
                                                                         </div>-->
 
                                     <div class="col-md-12 border-top-gray share_icon padding-20 border-bottom-gray">
-                                        <div class="col-md-2"><i class="fa fa-twitter  fa-2x"></i></div>
+<!--                                        <div class="col-md-2"><i class="fa fa-twitter  fa-2x"></i></div>
                                         <div class="col-md-2"><img class="fa-2x" width="30px" src="<?php echo get_template_directory_uri(); ?>/images/whatsapp.png"></div>
                                         <div class="col-md-2"><i class="fa fa-flag fa-2x"></i></div>
-                                        <div class="col-md-2"><i class="fa fa-2x fa-heart" aria-hidden="true"></i></div>
-                                        <div class="col-md-2"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></div>
+                                        <div class="col-md-2"><i class="fa fa-2x fa-heart" aria-hidden="true"></i></div>-->
+                                        <div class="col-md-2"><a href="mailto:<?php echo $author->user_email; ?>"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></a></div>
                                     </div>
                                 <?php the_content(); ?>
                                 </div>
@@ -227,3 +276,4 @@
     </div><!-- /content_botbg -->
 
 </div><!-- /content -->
+<?php echo do_shortcode('[front-end-pm]') ?>
