@@ -410,23 +410,9 @@ $current_page = end(array_filter($actual_link));
             <br>
             <div>
                 <?php
-                /* [0] => WP_Term Object
-                  (
-                  [term_id] => 3
-                  [name] => ad tag1
-                  [slug] => ad-tag1
-                  [term_group] => 0
-                  [term_taxonomy_id] => 3
-                  [taxonomy] => ad_tag
-                  [description] =>
-                  [parent] => 0
-                  [count] => 1
-                  [filter] => raw
-                  ) */
-                $tags_array = get_tags();
-                $tags_array = get_terms('ad_tag', array('hide_empty' => false));
-                foreach ($tags_array as $t):
-                    echo '<a title="' . $t->name . '" href="" class="tag">' . $t->name . '#</a><br>';
+                $properties = get_terms('ad_cat', array('parent' => 15, 'hide_empty' => false));
+                foreach ($properties as $p):
+                    echo '<a title="' . $p->name . '" href="" class="tag">' . $p->name . '#</a><br>';
                 endforeach;
                 ?>                
             </div>

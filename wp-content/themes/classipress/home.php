@@ -499,22 +499,25 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             </ul>
             <br>
             <div>
-                <?php
+        <?php $properties = get_terms('ad_cat', array('parent' => 15, 'hide_empty' => false));
+                
+                
                 /* [0] => WP_Term Object
-                  (
-                  [term_id] => 3
-                  [name] => ad tag1
-                  [slug] => ad-tag1
-                  [term_group] => 0
-                  [term_taxonomy_id] => 3
-                  [taxonomy] => ad_tag
-                  [description] =>
-                  [parent] => 0
-                  [count] => 1
-                  [filter] => raw
-                  ) */
-                $tags_array = get_tags();
-                $tags_array = get_terms('ad_tag', array('hide_empty' => false));
+        (
+            [term_id] => 38
+            [name] => اراضي للبيع
+            [slug] => %d8%a7%d8%b1%d8%a7%d8%b6%d9%8a-%d9%84%d9%84%d8%a8%d9%8a%d8%b9
+            [term_group] => 0
+            [term_taxonomy_id] => 38
+            [taxonomy] => ad_cat
+            [description] => Lands for sales
+            [parent] => 15
+            [count] => 0
+            [filter] => raw
+        )
+
+    [1] => WP_Term Object
+        ( */
 				
 				?>
 				
@@ -522,8 +525,8 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
 				<form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="get">
 					<?php 
 						echo '<input type="hidden" name="ad_tags" class="tag_input"><br>';
-					foreach ($tags_array as $t):
-						echo '<a data_value = "' . $t->name . '" title="' . $t->name . '" href="javascript:void(0)" class="tag">' . $t->name . '#</a><br>';
+					foreach ($properties as $p):
+						echo '<a data_value = "' . $p->name . '" title="' . $p->name . '" href="javascript:void(0)" class="tag">' . $p->name . '#</a><br>';
 					endforeach;
 					?> 			
 				</form>
