@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Theme functions file
  *
@@ -297,8 +296,8 @@ function custom_script() {
                 jQuery('.list-group-item-heading').addClass('col-md-2');
                 jQuery('.list-group-item-text').addClass('col-md-6');
                 jQuery('.main-col').removeClass('hide');
-                jQuery('.thumbnail').css('border','none');
-                
+                jQuery('.thumbnail').css('border', 'none');
+
             });
             jQuery('#grid').click(function (event) {
                 event.preventDefault();
@@ -310,11 +309,48 @@ function custom_script() {
                 jQuery('.list-group-item-text').removeClass('col-md-6');
                 jQuery('.list-group-item-heading').removeClass('col-md-2');
                 jQuery('.main-col').addClass('hide');
-                jQuery('.thumbnail').css('border','1px solid #ccc');
+                jQuery('.thumbnail').css('border', '1px solid #ccc');
             });
         });
     </script>
     <?php
-
 }
+
+function get_cat_sub_category_ajax() {
+    $parent_cat_ID = $_POST['parent_cat_ID'];
+    $all_category = get_terms('ad_cat', array('hide_empty' => false, 'parent' => $parent_cat_ID));
+    ?>
+    <select name="car_sub_category" class="form-control margin-top-10" id="sub_category_select">
+        <?php
+        echo "<option " . selected($_GET['car_sub_category'], '') . " value=''>All Models</option>";
+        foreach ($all_category as $value => $cat) {
+            echo "<option " . selected($_GET['car_sub_category'], $cat->term_id) . " value='$cat->term_id'>$cat->description</option>";
+        }
+        ?>
+    </select>
+    <?php
+    die();
+}
+
+add_action('wp_ajax_get_car_sub_category_select', 'get_cat_sub_category_ajax');
+add_action('wp_ajax_nopriv_get_car_sub_category_select', 'get_cat_sub_category_ajax'); //for users that are not logged in.
+
+function get_car_year_select_ajax() {
+    $parent_cat_ID = $_POST['sub_cat_id'];
+    $all_category = get_terms('ad_cat', array('hide_empty' => false, 'parent' => $parent_cat_ID));
+    ?>
+    <select name="car_year" class="form-control margin-top-10" id="year_select">
+        <?php
+        echo "<option " . selected($_GET['car_year'], '') . " value=''>All Year</option>";
+        foreach ($all_category as $value => $cat) {
+            echo "<option " . selected($_GET['car_year'], $cat->term_id) . " value='$cat->term_id'>$cat->name</option>";
+        }
+        ?>
+    </select>
+    <?php
+    die();
+}
+
+add_action('wp_ajax_get_car_year_select', 'get_car_year_select_ajax');
+add_action('wp_ajax_nopriv_get_car_year_select', 'get_car_year_select_ajax'); //for users that are not logged in.
 ?>
