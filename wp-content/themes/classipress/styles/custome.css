@@ -743,3 +743,28 @@ img {
 #step1 .form_step .dropdownlist{
     width: 300px;
 }
+.form_step .labelwrapper, .form_edit .labelwrapper {
+    float: right;    
+    padding: 0px 40px 0 0;
+    width: 160px;    
+    text-align: left;
+}
+.form_step #review{
+    float: right;
+}
+.commentform label {   
+    text-align: left;
+    width: 50%;
+}
+p.comments-box {    
+    padding:0px 20px 0px 0px;
+}
+textarea#comment{
+    width: 100%;
+}
+p.comments {    
+    margin-right: 20px;
+}
+#ad-categories .hasChild, #ad-categories .childCategory {
+    float: left;
+}

@@ -135,7 +135,7 @@ function cp_main_comment_form() {
 
 	<div id="respond">
 
-		<h2 class="dotted"><?php comment_form_title( __( 'Leave a Reply', APP_TD ), __( 'Leave a Reply to %s', APP_TD ) ); ?></h2>
+		<h2 class="dotted"><?php comment_form_title( __( 'اكتب تعليق', APP_TD ), __( 'اكتب تعليق to %s', APP_TD ) ); ?></h2>
 
 		<div class="cancel-comment-reply">
 
@@ -158,7 +158,7 @@ function cp_main_comment_form() {
 
 					<?php if ( is_user_logged_in() ) : global $user_identity; ?>
 
-						<p><?php _e( 'Logged in as', APP_TD ); ?> <a href="<?php echo CP_PROFILE_URL; ?>"><?php echo $user_identity; ?></a>. <a href="<?php echo cp_logout_url(); ?>" title="<?php _e( 'Logout of this account', APP_TD ); ?>"><?php _e( 'Logout', APP_TD ); ?> &raquo;</a></p>
+						<p><?php _e( 'دخول باسم', APP_TD ); ?> <a href="<?php echo CP_PROFILE_URL; ?>"><?php echo $user_identity; ?></a>. <a href="<?php echo cp_logout_url(); ?>" title="<?php _e( 'دخول باسم', APP_TD ); ?>"><?php _e( 'خروج', APP_TD ); ?> &raquo;</a></p>
 
 					<?php else : ?>
 
@@ -168,23 +168,23 @@ function cp_main_comment_form() {
 					?>
 
 						<p class="comments">
-							<label for="author"><?php _e( 'Name', APP_TD ); ?> <?php if ( $req ) _e( '(required)', APP_TD ); ?></label>
+                                                            <label for="author"><?php _e('اسم', APP_TD ); ?> </label>
 							<input type="text" name="author" id="author" class="text required" value="<?php echo esc_attr( $commenter['comment_author'] ); ?>" size="22" tabindex="1" />
 						</p>
 
 						<div class="clr"></div>
 
 						<p class="comments">
-							<label for="email"><?php _e( 'Email (will not be visible)', APP_TD ); ?> <?php if ( $req ) _e( '(required)', APP_TD ); ?></label>
+							<label for="email"><?php _e( 'البريد الإلكتروني', APP_TD ); ?> </label>
 							<input type="text" name="email" id="email" class="text required email" value="<?php echo esc_attr( $commenter['comment_author_email'] ); ?>" size="22" tabindex="2" />
 						</p>
 
 						<div class="clr"></div>
 
-						<p class="comments">
+<!--						<p class="comments">
 							<label for="url"><?php _e( 'Website', APP_TD ); ?></label>
 							<input type="text" name="url" id="url" class="text" value="<?php echo esc_attr( $commenter['comment_author_url'] ); ?>" size="22" tabindex="3" />
-						</p>
+						</p>-->
 
 						<div class="clr"></div>
 
@@ -199,7 +199,7 @@ function cp_main_comment_form() {
 					<div class="clr"></div>
 
 					<p class="comments">
-						<input name="submit" type="submit" id="submit" tabindex="5" class="btn_orange" value="<?php _e( 'Leave a Reply', APP_TD ); ?>" />
+						<input name="submit" type="submit" id="submit" tabindex="5" class="btn_orange" value="<?php _e( 'اترك رد', APP_TD ); ?>" />
 						<input type="hidden" name="comment_post_ID" value="<?php echo $post->ID; ?>" />
 					</p>
 

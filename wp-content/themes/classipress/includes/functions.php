@@ -984,7 +984,7 @@ function cp_get_dashboard_listing_actions( $listing_id = 0 ) {
 	// edit button
 	if ( $cp_options->ad_edit ) {
 		$edit_attr = array(
-			'title' => __( 'Edit Ad', APP_TD ),
+			'title' => __( 'تحرير الإعلان', APP_TD ),
 			'href' => add_query_arg( array( 'listing_edit' => $listing->ID ), CP_EDIT_URL ),
 		);
 		if ( in_array( $listing_status, array( 'live', 'offline' ) ) ) {
@@ -997,7 +997,7 @@ function cp_get_dashboard_listing_actions( $listing_id = 0 ) {
 
 	// delete button
 	$actions['delete'] = array(
-		'title' => __( 'Delete Ad', APP_TD ),
+		'title' => __( 'حذف الاعلان', APP_TD ),
 		'href' => add_query_arg( array( 'aid' => $listing->ID, 'action' => 'delete' ), CP_DASHBOARD_URL ),
 		'onclick' => 'return confirmBeforeDeleteAd();',
 	);
@@ -1019,22 +1019,22 @@ function cp_get_dashboard_listing_actions( $listing_id = 0 ) {
 	}
 
 	// set/unset sold links
-	if ( in_array( $listing_status, array( 'live', 'offline' ) ) ) {
-		$sold = get_post_meta( $listing->ID, 'cp_ad_sold', true );
-		if ( $sold != 'yes' ) {
-			// set sold
-			$actions['set_sold'] = array(
-				'title' => __( 'Mark Sold', APP_TD ),
-				'href' => add_query_arg( array( 'aid' => $listing->ID, 'action' => 'setSold' ), CP_DASHBOARD_URL ),
-			);
-		} else {
-			// unset sold
-			$actions['unset_sold'] = array(
-				'title' => __( 'Unmark Sold', APP_TD ),
-				'href' => add_query_arg( array( 'aid' => $listing->ID, 'action' => 'unsetSold' ), CP_DASHBOARD_URL ),
-			);
-		}
-	}
+//	if ( in_array( $listing_status, array( 'live', 'offline' ) ) ) {
+//		$sold = get_post_meta( $listing->ID, 'cp_ad_sold', true );
+//		if ( $sold != 'yes' ) {
+//			// set sold
+//			$actions['set_sold'] = array(
+//				'title' => __( 'Mark Sold', APP_TD ),
+//				'href' => add_query_arg( array( 'aid' => $listing->ID, 'action' => 'setSold' ), CP_DASHBOARD_URL ),
+//			);
+//		} else {
+//			// unset sold
+//			$actions['unset_sold'] = array(
+//				'title' => __( 'Unmark Sold', APP_TD ),
+//				'href' => add_query_arg( array( 'aid' => $listing->ID, 'action' => 'unsetSold' ), CP_DASHBOARD_URL ),
+//			);
+//		}
+//	}
 
 	// relist link
 	if ( $cp_options->allow_relist && in_array( $listing_status, array( 'ended', 'live_expired' ) ) ) {

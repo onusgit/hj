@@ -21,7 +21,7 @@
 
 					<div id="step1">
 
-						<h2 class="dotted"><?php _e( 'Submit Your Listing', APP_TD ); ?></h2>
+						<h2 class="dotted"><?php _e( 'إرسال إعلانك', APP_TD ); ?></h2>
 
 						<img src="<?php echo appthemes_locate_template_uri( 'images/step1.gif' ); ?>" alt="" class="stepimg" />
 

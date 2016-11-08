@@ -88,7 +88,7 @@ if ( ! function_exists( 'cp_dropdown_categories_prices' ) ) {
 	function cp_dropdown_categories_prices( $args = '' ) {
 		$defaults = array(
 			'show_option_all' => '',
-			'show_option_none' => __( 'Select one', APP_TD ),
+			'show_option_none' => __( 'اختر القسم', APP_TD ),
 			'orderby' => 'name',
 			'order' => 'ASC',
 			'show_last_update' => 0,

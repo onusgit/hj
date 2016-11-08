@@ -214,7 +214,9 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                         get_template_part('loop', 'ad_listing');
                         if ($total_pages > 1) {
                             ?>
-                            <div class="paging"><a href="<?php echo $post_type_url; ?>"> <?php _e('View More Ads', APP_TD); ?> </a></div>
+                            <div class="paging">
+                                <!--<a href="<?php echo $post_type_url; ?>"> <?php _e('View More Ads', APP_TD); ?> </a>-->
+                            </div>
                         <?php } ?>             
                     </div>
                 </div>
@@ -230,7 +232,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                 ?>
                 <select name="car_category" class="form-control margin-top-10" id="parent_cat">
                     <?php
-                    echo "<option " . selected($_GET['car_category'], '') . " value=''>All Brands</option>";
+                    echo "<option " . selected($_GET['car_category'], '') . " value=''>جميع</option>";
                     foreach ($all_category as $value => $cat) {
                         echo "<option " . selected($_GET['car_category'], $cat->term_id) . " value='$cat->term_id'>$cat->name</option>";
                     }

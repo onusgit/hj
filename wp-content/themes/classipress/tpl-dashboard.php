@@ -23,7 +23,7 @@ global $i;
 
 					<div class="shadowblock">
 
-						<h1 class="single dotted"><?php _e( 'Dashboard', APP_TD ); ?></h1>
+						<h1 class="single dotted"><?php _e( 'لوحة التحكم', APP_TD ); ?></h1>
 
 						<?php do_action( 'appthemes_notices' ); ?>
 
@@ -36,18 +36,18 @@ global $i;
 							$i = ( $paged != 1 ) ? ( $paged * $posts_per_page - $posts_per_page ) : 0;
 						?>
 
-						<p><?php _e( 'Below you will find a listing of all your classified ads. Click on one of the options to perform a specific task. If you have any questions, please contact the site administrator.', APP_TD ); ?></p>
+						<p><?php _e('أدناه سوف تجد قائمة بجميع الإعلانات المبوبة الخاصة بك. انقر على اي  من الخيارات لتنفيذ مهمة معينة. إذا كان لديك أي أسئلة، يرجى الاتصال بمسؤول الموقع.', APP_TD ); ?></p>
 
 						<table border="0" cellpadding="4" cellspacing="1" class="tblwide footable">
 							<thead>
 								<tr>
 									<th class="listing-count" data-class="expand">&nbsp;</th>
-									<th class="listing-title">&nbsp;<?php _e( 'Title', APP_TD ); ?></th>
+									<th class="listing-title">&nbsp;<?php _e( 'عنوان', APP_TD ); ?></th>
 									<?php if ( current_theme_supports( 'app-stats' ) ) { ?>
-										<th class="listing-views" data-hide="phone"><?php _e( 'Views', APP_TD ); ?></th>
+										<th class="listing-views" data-hide="phone"><?php _e( 'المشاهدات', APP_TD ); ?></th>
 									<?php } ?>
-									<th class="listing-status" data-hide="phone"><?php _e( 'Status', APP_TD ); ?></th>
-									<th class="listing-options" data-hide="phone"><?php _e( 'Options', APP_TD ); ?></th>
+									<th class="listing-status" data-hide="phone"><?php _e( 'الحالة', APP_TD ); ?></th>
+									<th class="listing-options" data-hide="phone"><?php _e( 'خيارات', APP_TD ); ?></th>
 								</tr>
 							</thead>
 							<tbody>

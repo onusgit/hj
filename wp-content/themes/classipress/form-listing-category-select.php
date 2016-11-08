@@ -129,7 +129,7 @@
 
                     <div id="step1">
 
-                        <h2 class="dotted"><?php _e('Submit Your Listing', APP_TD); ?></h2>
+                        <h2 class="dotted"><?php _e('إرسال إعلانك', APP_TD); ?></h2>
 
                         <img src="<?php echo appthemes_locate_template_uri('images/step1.gif'); ?>" alt="" class="stepimg" />
 
@@ -149,7 +149,7 @@
                             <ol>
                                 
                                 <li>
-                                    <div class="labelwrapper"><label><?php _e('Select a Category:', APP_TD); ?></label></div>
+                                    <div class="labelwrapper"><label><?php _e('اختر القسم', APP_TD); ?></label></div>
                                     <div id="ad-categories" style="display:block; margin-left:170px;">						
                                         <div id="catlvl0">
                                             <?php cp_dropdown_categories_prices(); ?>
