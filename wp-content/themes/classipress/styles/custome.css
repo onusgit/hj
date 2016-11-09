@@ -427,6 +427,7 @@ a.gallerypic:hover span.pic-icon{
     border: 1px solid #F2F2F2;
     display: block;
     max-width: 100%;
+    border-radius: 10px;
 }
 .img_carousel li img {
     height: 160px;

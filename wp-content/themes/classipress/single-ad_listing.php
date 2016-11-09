@@ -69,7 +69,7 @@
 <div class="content">
     <div class="content_botbg">
         <div class="content_ads">
-            <!--<div id="breadcrumb"><?php // cp_breadcrumb();                          ?></div>-->
+            <!--<div id="breadcrumb"><?php // cp_breadcrumb();                           ?></div>-->
             <div class="clr"></div>
             <div class="content_left_ads">
                 <?php
@@ -110,7 +110,7 @@
                         <div class="shadowblock_out <?php cp_display_style('featured'); ?>">
                             <div class="shadowblock">
                                 <?php // appthemes_before_post_title();  ?>
-                                <!--<h1 class="single-listing"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php // the_title();                         ?></a></h1>-->
+                                <!--<h1 class="single-listing"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php // the_title();                          ?></a></h1>-->
                                 <div class="clr"></div>
                                 <?php // appthemes_after_post_title();  ?>
                                 <!--<div class="pad5 dotted"></div>-->
@@ -158,7 +158,7 @@
                                     </div>
 
                                 </div>
-                                <div class="bigright padding-top-20 <?php // cp_display_style('ad_single_images');                         ?>">
+                                <div class="bigright padding-top-20 <?php // cp_display_style('ad_single_images');                          ?>">
 
                                     <ul>
                                         <?php
@@ -175,9 +175,9 @@
                                         cp_get_ad_details($post->ID, $cat_id);
                                         ?>
 
-                                                                                                                       <!--  <li id="cp_listed"><span><?php _e('Listed:', APP_TD); ?></span> <?php echo appthemes_display_date($post->post_date); ?></li>
+                                                                                                                               <!--  <li id="cp_listed"><span><?php _e('Listed:', APP_TD); ?></span> <?php echo appthemes_display_date($post->post_date); ?></li>
                                         <?php if ($expire_date = get_post_meta($post->ID, 'cp_sys_expire_date', true)) { ?>
-                                                                                                                                                                    <li id="cp_expires"><span><?php _e('Expires:', APP_TD); ?></span> <?php echo cp_timeleft($expire_date); ?></li>
+                                                                                                                                                                                <li id="cp_expires"><span><?php _e('Expires:', APP_TD); ?></span> <?php echo cp_timeleft($expire_date); ?></li>
                                         <?php } ?> -->
 
                                     </ul>
@@ -306,13 +306,15 @@
                 <?php if (have_posts()) : ?>
                     <?php
                     while (have_posts()) : the_post();
-                        echo the_title();
-                        ?>                        
-                        <div class="thumbnail">        
-                            <div class="group list-group-image">
-                                <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
-                            </div>
-                        </div> 
+//                        echo the_title();
+                        ?>          
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                            <div class="thumbnail">        
+                                <div class="group list-group-image">
+                                    <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
+                                </div>
+                            </div> 
+                        </a>
                     <?php endwhile; ?>                 
                 <?php endif; ?>
                 <!--

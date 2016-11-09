@@ -70,7 +70,7 @@
             <ol>
 
                 <li>
-                    <div class="labelwrapper"><label><?php _e('Cost Per Listing:', APP_TD); ?></label></div>
+                    <div class="labelwrapper"><label><?php // _e('Cost Per Listing:', APP_TD); ?></label></div>
                     <?php cp_cost_per_listing(); ?>
                     <div class="clr"></div>
                 </li>

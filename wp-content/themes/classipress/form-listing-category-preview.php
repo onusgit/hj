@@ -40,11 +40,11 @@
 
 							<ol>
 
-								<li>
+<!--								<li>
 									<div class="labelwrapper"><label><?php _e( 'Cost Per Listing:', APP_TD ); ?></label></div>
 									<?php cp_cost_per_listing(); ?>
 									<div class="clr"></div>
-								</li>
+								</li>-->
 
 								<li>
 									<div class="labelwrapper"><label><?php _e( 'Category:', APP_TD ); ?></label></div>

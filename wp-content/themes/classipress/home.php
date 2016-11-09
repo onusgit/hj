@@ -22,88 +22,204 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                     <li><a data-toggle="tab" href="#menu4">أخرى</a></li>
                 </ul>
                 <div class="tab-content">
-                    <div id="home" class="tab-pane fade in active">
-                        <h3>التسجيل بالموقع</h3>
+                    <div id="home" class="tab-pane fade in active">                       
+                        <?php
+                        $query = [];
+                        $query = array(
+                            'post_type' => 'ad_listing',
+                            'posts_per_page' => '8',
+                        );
+                        query_posts($query);
+                        ?>
                         <div class="main-col">
                             <div class="row img_carousel">
                                 <ul>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/5710af3ef3871.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/5710af3ef3871.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/5710af3ef3871.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/5710af3ef3871.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/5710af3ef3871.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/5710af3ef3871.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/5710af3ef3871.jpg" alt="" class="img-rounded"></a></li>
+                                    <?php if (have_posts()) : ?>
+                                        <?php
+                                        while (have_posts()) : the_post();
+                                            //                        echo the_title();
+                                            ?>          
+                                            <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                                    <div class="thumbnail">        
+                                                        <div class="group list-group-image img-rounded">
+                                                            <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
+                                                        </div>
+                                                    </div> 
+                                                </a>
+                                            </li>
+                                        <?php endwhile; ?>                 
+                                    <?php endif; ?>
+
                                 </ul>
                                 <p class="text-left"><b><a class="red" href="#">السيارات المصورة   </a></b></p>
                             </div>
                         </div>
                     </div>
-                    <div id="menu1" class="tab-pane fade">
-                        <h3>التسجيل بالموقع</h3>
+                    <div id="menu1" class="tab-pane fade">                        
+                        <?php
+                        $query = [];
+                        $query = array(
+                            'post_type' => 'ad_listing',
+                            'posts_per_page' => '8',
+                        );
+                        $q = array('tax_query' => array(
+                                array(
+                                    'taxonomy' => 'ad_cat',
+                                    'field' => 'term_id',
+                                    'terms' => 13,
+                                    'operator' => 'IN'
+                                )
+                            )
+                        );
+                        $query = array_merge($query, $q);
+                        query_posts($query);
+                        ?>
                         <div class="main-col">
                             <div class="row img_carousel">
                                 <ul>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                </ul>
-                                <p class="text-left"><b><a class="red" href="#">السيارات المصورة   </a></b></p>
+                                    <?php if (have_posts()) : ?>
+                                        <?php
+                                        while (have_posts()) : the_post();
+                                            //                        echo the_title();
+                                            ?>          
+                                            <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                                    <div class="thumbnail">        
+                                                        <div class="group list-group-image img-rounded">
+                                                            <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
+                                                        </div>
+                                                    </div> 
+                                                </a>
+                                            </li>
+                                        <?php endwhile; ?>                 
+                                    <?php endif; ?>
+
+                                </ul>                              
                             </div>
                         </div>
                     </div>
                     <div id="menu2" class="tab-pane fade">
-                        <h3>التسجيل بالموقع</h3>
+                        <?php
+                        $query = [];
+                        $query = array(
+                            'post_type' => 'ad_listing',
+                            'posts_per_page' => '8',
+                        );
+                        $q = array('tax_query' => array(
+                                array(
+                                    'taxonomy' => 'ad_cat',
+                                    'field' => 'term_id',
+                                    'terms' => 14,
+                                    'operator' => 'IN'
+                                )
+                            )
+                        );
+                        $query = array_merge($query, $q);
+                        query_posts($query);
+                        ?>
                         <div class="main-col">
                             <div class="row img_carousel">
                                 <ul>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/b38fbB91CE02e8.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/b38fbB91CE02e8.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/b38fbB91CE02e8.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/b38fbB91CE02e8.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/b38fbB91CE02e8.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/b38fbB91CE02e8.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/b38fbB91CE02e8.jpg" alt="" class="img-rounded"></a></li>
-                                </ul>
-                                <p class="text-left"><b><a class="red" href="#">السيارات المصورة   </a></b></p>
+                                    <?php if (have_posts()) : ?>
+                                        <?php
+                                        while (have_posts()) : the_post();
+                                            //                        echo the_title();
+                                            ?>          
+                                            <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                                    <div class="thumbnail">        
+                                                        <div class="group list-group-image img-rounded">
+                                                            <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
+                                                        </div>
+                                                    </div> 
+                                                </a>
+                                            </li>
+                                        <?php endwhile; ?>                 
+                                    <?php endif; ?>
+
+                                </ul>                              
                             </div>
                         </div>
                     </div>
                     <div id="menu3" class="tab-pane fade">
-                        <h3>التسجيل بالموقع</h3>
+                        <?php
+                        $query = [];
+                        $query = array(
+                            'post_type' => 'ad_listing',
+                            'posts_per_page' => '8',
+                        );
+                        $q = array('tax_query' => array(
+                                array(
+                                    'taxonomy' => 'ad_cat',
+                                    'field' => 'term_id',
+                                    'terms' => 15,
+                                    'operator' => 'IN'
+                                )
+                            )
+                        );
+                        $query = array_merge($query, $q);
+                        query_posts($query);
+                        ?>
                         <div class="main-col">
                             <div class="row img_carousel">
                                 <ul>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                </ul>
-                                <p class="text-left"><b><a class="red" href="#">السيارات المصورة   </a></b></p>
+                                    <?php if (have_posts()) : ?>
+                                        <?php
+                                        while (have_posts()) : the_post();
+                                            //                        echo the_title();
+                                            ?>          
+                                            <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                                    <div class="thumbnail">        
+                                                        <div class="group list-group-image img-rounded">
+                                                            <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
+                                                        </div>
+                                                    </div> 
+                                                </a>
+                                            </li>
+                                        <?php endwhile; ?>                 
+                                    <?php endif; ?>
+
+                                </ul>                              
                             </div>
                         </div>
                     </div>
                     <div id="menu4" class="tab-pane fade">
-                        <h3>التسجيل بالموقع</h3>
+                        <?php
+                        $query = [];
+                        $query = array(
+                            'post_type' => 'ad_listing',
+                            'posts_per_page' => '8',
+                        );
+                        $q = array('tax_query' => array(
+                                array(
+                                    'taxonomy' => 'ad_cat',
+                                    'field' => 'term_id',
+                                    'terms' => 16,
+                                    'operator' => 'IN'
+                                )
+                            )
+                        );
+                        $query = array_merge($query, $q);
+                        query_posts($query);
+                        ?>
                         <div class="main-col">
                             <div class="row img_carousel">
                                 <ul>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                    <li><a href="#"><img src="https://imgcdn.haraj.com.sa/cache2/f361d36bUqV18l.jpg" alt="" class="img-rounded"></a></li>
-                                </ul>
-                                <p class="text-left"><b><a class="red" href="#">السيارات المصورة   </a></b></p>
+                                    <?php if (have_posts()) : ?>
+                                        <?php
+                                        while (have_posts()) : the_post();
+                                            //                        echo the_title();
+                                            ?>          
+                                            <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                                    <div class="thumbnail">        
+                                                        <div class="group list-group-image img-rounded">
+                                                            <?php if ($cp_options->ad_images) cp_ad_loop_thumbnail(); ?>            
+                                                        </div>
+                                                    </div> 
+                                                </a>
+                                            </li>
+                                        <?php endwhile; ?>                 
+                                    <?php endif; ?>
+
+                                </ul>                              
                             </div>
                         </div>
                     </div>
@@ -169,7 +285,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
 //                                    'compare' => 'IN'
 //                                )
 //                            ),
-                            'ad_tag' => $_GET['ad_tags'],
+                            'ad_tag' => $_GET['ad_category'],
                                 //'ad_cat' => $_GET['category'],
                                 //'p' => $_GET['adsnumber'],
                                 //'cp_sys_ad_conf_id' => '950581d5200c0838',
@@ -276,7 +392,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                         <li class=""><a data-toggle="tab" href="#profile">سيارات بالصور</a></li>
                     </ul>
 
-                    <input type="hidden" name="ad_tags" class="tag_input"><br>
+                    <input type="hidden" name="ad_category" class="tag_input"><br>
 
                     <div class="tab-content" id="myTabContent">
                         <div id="home" class="tab-pane fade active in">
@@ -431,7 +547,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             </ul>
             <br>
             <form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="get">
-                <input type="hidden" name="ad_tags" class="tag_input"><br>
+                <input type="hidden" name="ad_category" class="tag_input"><br>
 
                 <div>
                     <div class="glyph">
@@ -488,7 +604,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
             </ul>
             <br>
             <form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="get">
-                <input type="hidden" name="ad_tags" class="tag_input"><br>
+                <input type="hidden" name="ad_category" class="tag_input"><br>
                 <div>
                     <div class="glyph">
 
@@ -552,7 +668,7 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
 
                 <form class="form-horizontal  bs-example-control-sizing" name="drop_list" method="get">
                     <?php
-                    echo '<input type="hidden" name="ad_tags" class="tag_input"><br>';
+                    echo '<input type="hidden" name="ad_category" class="tag_input"><br>';
                     foreach ($properties as $p):
                         echo '<a data_value = "' . $p->name . '" title="' . $p->name . '" href="javascript:void(0)" class="tag">' . $p->name . '#</a><br>';
                     endforeach;
