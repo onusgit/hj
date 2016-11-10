@@ -292,7 +292,7 @@ function custom_script() {
                 event.preventDefault();
                 jQuery('#products .item').addClass('list-group-item');
                 jQuery('.nav-hide').removeClass('hide');
-                jQuery('.list-group-image').addClass('hide');
+                jQuery('#products .thumbnail .list-group-image').addClass('hide');
                 jQuery('.list-group-item-heading').addClass('col-md-2');
                 jQuery('.list-group-item-text').addClass('col-md-6');
                 jQuery('.main-col').removeClass('hide');
