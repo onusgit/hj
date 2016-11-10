@@ -245,8 +245,8 @@
                                     <div class="col-md-12 border-top-gray share_icon padding-20 border-bottom-gray">
         <!--                                        <div class="col-md-2"><i class="fa fa-twitter  fa-2x"></i></div>
                                         <div class="col-md-2"><img class="fa-2x" width="30px" src="<?php echo get_template_directory_uri(); ?>/images/whatsapp.png"></div>
-                                        <div class="col-md-2"><i class="fa fa-flag fa-2x"></i></div>
-                                        <div class="col-md-2"><i class="fa fa-2x fa-heart" aria-hidden="true"></i></div>-->
+                                        <div class="col-md-2"><i class="fa fa-flag fa-2x"></i></div>-->
+                                        <div class="col-md-2"><?php if ( function_exists( 'wfp_button' ) ) wfp_button(); ?></div>
                                         <div class="col-md-2"><a href="mailto:<?php echo $author->user_email; ?>"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></a></div>
                                     </div>
                                     <?php the_content(); ?>
@@ -350,4 +350,5 @@
     </div><!-- /content_botbg -->
 
 </div><!-- /content -->
-<?php echo do_shortcode('[front-end-pm]') ?>
+<?php 
+echo do_shortcode('[front-end-pm]') ?>

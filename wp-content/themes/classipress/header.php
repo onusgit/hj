@@ -41,6 +41,7 @@ global $cp_options;
             <div class="collapse navbar-collapse navbar-ex1-collapse col-md-9">
                 <ul class="nav navbar-nav menu">
                     <?php if(is_user_logged_in()):?>
+                        <li><a href="<?php echo site_url(); ?>//my-favorites/"> المفضلة<i class="fa fa-heart"></i>  </a></li>
                         <li><a href="<?php echo site_url(); ?>/dashboard/">لوحة التحكم</a></li>                        
                     <?php else:?>
                     <li><a href="<?php echo site_url(); ?>/login">تسجيل الدخول  </a></li>

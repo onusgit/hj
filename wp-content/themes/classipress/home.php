@@ -247,6 +247,8 @@ $current_user = wp_get_current_user(); // grabs the user info and puts into vars
                         </div>
 
                         <?php
+                        $favorites = WeDevs_Favorite_Posts::init()->get_favorites();
+                        
                         // show all ads but make sure the sticky featured ads don't show up first
                         $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
