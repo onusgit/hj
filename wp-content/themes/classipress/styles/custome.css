@@ -769,3 +769,6 @@ p.comments {
 #ad-categories .hasChild, #ad-categories .childCategory {
     float: left;
 }
+#products .group.list-group-image a img {
+    width: 100%;
+}
